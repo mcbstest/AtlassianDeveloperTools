@@ -196,7 +196,7 @@ fun main(args : Array<String>) {
     */
 
      //j.queryReqId("30","Fehler,Anforderung","MCBS,ABRMS")
-    val logger = Logger.getLogger(AtlassianJiraIssue::class.java.getName())
+    val logger = Logger.getLogger(AtlassianJiraIssue::class.java.name)
 
     /*
     // referenced issues
@@ -270,6 +270,6 @@ fun main(args : Array<String>) {
 
     // get components
     val componentList = j.getComponentsForIssue("ABC-3007.xml")
-
+    logger.info(componentList.toString())
 
 }
