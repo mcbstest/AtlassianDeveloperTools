@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d88d6d90-cba0-456e-8fae-9a1f11102f32" name="Default Changelist" comment="" />
+    <list default="true" id="d88d6d90-cba0-456e-8fae-9a1f11102f32" name="Default Changelist" comment="set comment">
+      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/dev/dev.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/dev/dev.kt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -50,6 +62,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1ZDWjcYZAOfozU7JNgQzSmfstyN" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -58,6 +73,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/kotlin/meta_issue" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
@@ -81,7 +97,7 @@
       <command value="gradle clean build fatJar dokka" />
     </option>
   </component>
-  <component name="RunManager" selected="Kotlin.AddSprints">
+  <component name="RunManager" selected="Kotlin.DevKt">
     <configuration name="AtlassianDeveloperTools [clean build fatJar dokka]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -214,7 +230,7 @@
     </configuration>
     <configuration name="DevKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
       <module name="AtlassianDeveloperTools.main" />
-      <option name="VM_PARAMETERS" value="configuration=file:C:\bm\AtlassianDeveloperTools\log4j_debug.properties" />
+      <option name="VM_PARAMETERS" value="-Dlog4j.configuration=file:C:\bm\bm_temp\ADT\log4j_debug.properties" />
       <option name="PROGRAM_PARAMETERS" value="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="ALTERNATIVE_JRE_PATH" value="C:/Program Files/Zulu/zulu-11" />
@@ -424,13 +440,42 @@
       <option name="presentableId" value="Default" />
       <updated>1584374280420</updated>
     </task>
+    <task id="LOCAL-00001" summary="set comment">
+      <created>1601363721048</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1601363721049</updated>
+    </task>
+    <task id="LOCAL-00002" summary="cleanup idea warnings">
+      <created>1601363961643</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1601363961643</updated>
+    </task>
+    <task id="LOCAL-00003" summary="logging ...">
+      <created>1601367881627</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1601367881627</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <MESSAGE value="set comment" />
+    <MESSAGE value="cleanup idea warnings" />
+    <MESSAGE value="logging ..." />
+    <option name="LAST_COMMIT_MESSAGE" value="logging ..." />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="225" y="101" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1600756557671">
+    <state x="225" y="101" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1601367483596">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="225" y="101" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1600756557671" />
+    <state x="225" y="101" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1601367483596" />
     <state x="473" y="225" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1600076822595">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -439,26 +484,38 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="486" y="182" width="570" height="419" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1536.824@0.0.1536.824" timestamp="1600322702376" />
-    <state width="1493" height="201" key="GridCell.Tab.0.bottom" timestamp="1600323974235">
+    <state x="452" y="15" key="CommitChangelistDialog2" timestamp="1601367879319">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="201" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1600323974235" />
-    <state width="1493" height="201" key="GridCell.Tab.0.center" timestamp="1600323974234">
+    <state x="452" y="15" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1601367879319" />
+    <state width="1493" height="201" key="GridCell.Tab.0.bottom" timestamp="1601367489966">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="201" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1600323974234" />
-    <state width="1493" height="201" key="GridCell.Tab.0.left" timestamp="1600323974234">
+    <state width="1493" height="201" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1601367489966" />
+    <state width="1493" height="201" key="GridCell.Tab.0.center" timestamp="1601367489966">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="201" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1600323974234" />
-    <state width="1493" height="201" key="GridCell.Tab.0.right" timestamp="1600323974234">
+    <state width="1493" height="201" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1601367489966" />
+    <state width="1493" height="201" key="GridCell.Tab.0.left" timestamp="1601367489966">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="201" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1600323974234" />
+    <state width="1493" height="201" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1601367489966" />
+    <state width="1493" height="201" key="GridCell.Tab.0.right" timestamp="1601367489966">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="201" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1601367489966" />
+    <state x="361" y="148" key="Vcs.Push.Dialog.v2" timestamp="1601367944623">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="148" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1601367944623" />
     <state x="465" y="220" key="com.intellij.ide.util.TipDialog" timestamp="1599568305230">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="465" y="220" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1599568305230" />
+    <state x="464" y="216" key="git4idea.merge.GitPullDialog" timestamp="1601368026990">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="464" y="216" key="git4idea.merge.GitPullDialog/0.0.1536.824@0.0.1536.824" timestamp="1601368026990" />
     <state x="421" y="190" width="672" height="677" key="run.anything.popup" timestamp="1593093549729">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
