@@ -271,6 +271,6 @@ fun main(args : Array<String>) {
     // get components
     val componentList = j.getComponentsForIssue("ABC-3007.xml")
     logger.info(componentList.toString())
-    println("!")
+    println("!?")
 
 }
