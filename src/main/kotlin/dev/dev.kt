@@ -268,6 +268,7 @@ fun main(args : Array<String>) {
 
    //j.getIssueId("ABRMS-2363")
 
+    // get components
     val componentList = j.getComponentsForIssue("ABC-3007.xml")
 
 
