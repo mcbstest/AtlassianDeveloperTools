@@ -1,0 +1,32 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>AtlassianBambooInfo.getIssuesForBuild - AtlassianDeveloperTools</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">AtlassianDeveloperTools</a>&nbsp;/&nbsp;<a href="../index.html">atlassian_bamboo</a>&nbsp;/&nbsp;<a href="index.html">AtlassianBambooInfo</a>&nbsp;/&nbsp;<a href="./get-issues-for-build.html">getIssuesForBuild</a><br/>
+<br/>
+<h1>getIssuesForBuild</h1>
+<a name="atlassian_bamboo.AtlassianBambooInfo$getIssuesForBuild(kotlin.String, kotlin.String)"></a>
+<code><span class="keyword">fun </span><span class="identifier">getIssuesForBuild</span><span class="symbol">(</span><span class="identifier" id="atlassian_bamboo.AtlassianBambooInfo$getIssuesForBuild(kotlin.String, kotlin.String)/plankey">plankey</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="atlassian_bamboo.AtlassianBambooInfo$getIssuesForBuild(kotlin.String, kotlin.String)/buildnumber">buildnumber</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-array-list/index.html"><span class="identifier">ArrayList</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">&gt;</span></code>
+<p>Funktion zum Auslesen der beinhalteten Jira-Issues in einem Bamboo-Build</p>
+<ul><li>Auslesen der Bamboo-Build-Infos , expandiert um die Jira-Issues</li>
+<li>Auswertung des JSON-Objekts</li>
+<li>Rueckgabe der beinhalteten JIRA-Issues in einer Liste</li>
+</ul>
+<h3>Parameters</h3>
+<p><a name="plankey"></a>
+<code>plankey</code> - Der Bamboo-PlanKey (z.B. "MCBS-MR63") zu dem die Issues ausgelesen werden sollen</p>
+<p><a name="buildnumber"></a>
+<code>buildnumber</code> - Die laufende Nummer des Bamboo-Builds zu dem die Issues ausgelesen werden sollen</p>
+<p><strong>Return</strong><br/>
+issueList Eine Liste von Issues, die laut Bamboo in diesem Build neu hinzugekommen sind</p>
+<p><strong>Author</strong><br/>
+Bernd Moeller</p>
+<p><strong>Version</strong><br/>
+1.0</p>
+<p><strong>Since</strong><br/>
+1.0</p>
+</BODY>
+</HTML>

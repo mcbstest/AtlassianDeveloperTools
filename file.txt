@@ -1,0 +1,2 @@
+cucumber-result=https://bambooweb.mobilcom.de/browse/ABRMS-MSCUBR36-6/artifact/shared/cucumber-result/index.html
+junit-result=https://bambooweb.mobilcom.de/browse/ABRMS-MSCUBR36-6/artifact/shared/junit-result/cubaCucumberTest.xml

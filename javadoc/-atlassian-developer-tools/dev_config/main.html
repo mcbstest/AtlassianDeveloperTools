@@ -1,0 +1,36 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>main - AtlassianDeveloperTools</title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">AtlassianDeveloperTools</a>&nbsp;/&nbsp;<a href="index.html">dev_config</a>&nbsp;/&nbsp;<a href="./main.html">main</a><br/>
+<br/>
+<h1>main</h1>
+<a name="dev_config$main(kotlin.Array((kotlin.String)))"></a>
+<code><span class="keyword">fun </span><span class="identifier">main</span><span class="symbol">(</span><span class="identifier" id="dev_config$main(kotlin.Array((kotlin.String)))/args">args</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html"><span class="identifier">Array</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Methode zur Abfrage , ob ein Issue Config-Abhängigkeiten unterliegt</p>
+<ul><li>die Komponenten des Issue werden ausgelesen</li>
+<li>Enthält die Komponentenliste "ms-configuration" wird "TRUE" im Config-Propertyfile gesetzt, ansonsten false</li>
+</ul>
+<p>Aufruf :
+java -cp ./build/libs/AtlassianDeveloperTools-all-1.0.jar:. dev_config.CheckConfigKt https://jira.freenet-group.de/rest/api/2/ mcbstest:password MCBS-2774</p>
+<h3>Parameters</h3>
+<p><a name="bambooURL"></a>
+<code>bambooURL</code> - die URL fuer produktiven Bamboo-Zugriff</p>
+<p><a name="jiraURL"></a>
+<code>jiraURL</code> - die URL fuer produktiven JIRA-Zugriff</p>
+<p><a name="credentials"></a>
+<code>credentials</code> - login:password fuer produktiven JIRA-Zugriff</p>
+<p><a name="issue"></a>
+<code>issue</code> - das zu prüfende Ticket</p>
+<p><a name="exceptionFile"></a>
+<code>exceptionFile</code> - Property-File mit nicht zu beruecksichtigenden Prefixes (UTF , M;SBS etc.) (erwartet in jiraResources)</p>
+<p><strong>Author</strong><br/>
+bmoeller</p>
+<p><strong>See Also</strong><br/>
+<p><a href="../atlassian_jira/-atlassian-jira-issue/index.html">AtlassianJiraIssue</a></p>
+</p>
+</BODY>
+</HTML>

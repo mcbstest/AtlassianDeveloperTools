@@ -1,0 +1,45 @@
+SELECT DISTINCT vt.contract_no, c.start_date c_start_date, vt.tariffid, t.description, vt.start_date,
+					vt.end_date, vt.endreason, vt.id, c.dealer, p.name_1, cr.context, c.billed_until,                            (
+					SELECT DISTINCT cbt.business_case
+					FROM  contract_business_transactions cbt, contract_business_modifications cbm
+					where cbm.creationtime = cbt.creationtime
+					AND cbm.id = cbt.id
+					AND cbt.business_case in (1,6)
+					AND cbm.target_link_code=22
+					AND cbm.target_main_id = vt.contract_no                            ) NEU_AKT,
+					(	SELECT (ct.shortcut||' '||ct.description)
+						FROM customertypes ct, invoice_defs id, persons pers, involvements ii
+						WHERE id.customer_no = pers.persno
+						AND pers.flags = ct.code
+						AND ii.target_contract_no = c.contract_no
+						AND ii.role = 'OWNER'
+						AND ii.valid_to is null
+						AND id.invoice_no = ii.source_invoice_no                            ) KD_TYP
+						FROM   valid_tariffs vt, tariffs t, contracts c, product_spec_type_mappings pstm,
+						        product_spec_types pst, persons p,  services serv, tmp_contracts tc,
+						        OUTER  contract_relations cr
+						WHERE  vt.contract_no = serv.contract_no
+						AND    vt.contract_no = tc.contract_no
+						AND    serv.start_date >= today -10
+						AND    serv.start_date <= today
+						AND    serv.product in (31343,31344,31347,31348,31349,31384,31327,31056,31257,28343,46000,46001,46002,46003,46004,46005,46006,46007,46008,46009)
+						AND    vt.tariffid >= 1000
+						AND    p.persno = c.dealer
+						AND    vt.tariffid = pstm.target
+						AND    pstm.link_target = 35
+						AND    pstm.product_spec_type_id = pst.id
+						AND    pst.context_id = 5
+						AND    pst.name like '%CREDIT%'
+						AND    cr.source_id = vt.contract_no
+						AND    vt.tariffid = t.code
+						AND    cr.target_id in (
+							select con.contract_no
+							from contracts con, services serv
+							where con.contract_no = serv.contract_no
+							and (serv.end_date is null or serv.end_date > today)
+							and (con.end_date is NULL or con.end_date > today)
+							and serv.product = 28312)
+						AND    vt.contract_no = c.contract_no
+						AND    vt.start_date <= today
+						AND    (vt.end_date is null or vt.end_date > today)
+						AND    (c.end_date is null or c.end_date > today)

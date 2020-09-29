@@ -1,0 +1,54 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>main - AtlassianDeveloperTools</title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">AtlassianDeveloperTools</a>&nbsp;/&nbsp;<a href="index.html">be_issue</a>&nbsp;/&nbsp;<a href="./main.html">main</a><br/>
+<br/>
+<h1>main</h1>
+<a name="be_issue$main(kotlin.Array((kotlin.String)))"></a>
+<code><span class="keyword">fun </span><span class="identifier">main</span><span class="symbol">(</span><span class="identifier" id="be_issue$main(kotlin.Array((kotlin.String)))/args">args</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html"><span class="identifier">Array</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Methode um JIRA-BE-Orders zu erzeugen, zuzuweisen und zu beobachten</p>
+<ul><li>Erzeugung des Issue im Projekt "SUPAPP"</li>
+<li>interne Zuweisung zur weiteren Bearbeitung</li>
+<li>Beobachter werden gesetzt</li>
+<li>die endgültige Zuweisung erfolgt manuell nach der Vervollständigung</li>
+</ul>
+<p>Aufruf :
+java -cp ./devtools/apps/atltools/AtlassianDeveloperTools-all-1.1.jar:.:./devtools/apps/atltools/AtlassianDeveloperTools be_issue.BE_IssueKt https://jira.freenet-group.de/rest/api/2/ mcbstest:qs_mcbs_11 SUPAPP Aufgabe bmoeller bmoeller "${bamboo.release.version}" ContractService "${bamboo.mcbsepic}" "${bamboo.db_changes}" "${bamboo.mcbsserv.releaseVersion}" "${bamboo.deploy_asap}" "${bamboo.jiraproduct}"</p>
+<h3>Parameters</h3>
+<p><a name="jiraURL"></a>
+<code>jiraURL</code> - die URL fuer produktiven JIRA-Zugriff</p>
+<p><a name="credentials"></a>
+<code>credentials</code> - login:password fuer produktiven JIRA-Zugriff</p>
+<p><a name="project"></a>
+<code>project</code> - das JiraProjekt, in dem der DB-Issue erzeugt werden soll</p>
+<p><a name="ordertype"></a>
+<code>ordertype</code> - der OrderType als Text (e.g. Aufgabe , Service-Auftrag)</p>
+<p><a name="assignee"></a>
+<code>assignee</code> - der username / login</p>
+<p><a name="watcher"></a>
+<code>watcher</code> - eine komma-separierte Liste der anzulegenden Beobachter</p>
+<p><a name="version"></a>
+<code>version</code> - die versionsnummer</p>
+<p><a name="product"></a>
+<code>product</code> - Die Produktbezeichnung</p>
+<p><a name="epic"></a>
+<code>epic</code> - das Epic zum Release</p>
+<p><a name="dbchanges"></a>
+<code>dbchanges</code> - ja / nein</p>
+<p><a name="rel_dep"></a>
+<code>rel_dep</code> - Release-Dependency (weist auf Release-Abhängigkeiten und auch auf das zug. Artifactory-Release hin</p>
+<p><a name="deploy_asap"></a>
+<code>deploy_asap</code> - Hinweis auf die Dringlichkeit</p>
+<p><a name="jira_product"></a>
+<code>jira_product</code> - das betroffene Produkt in jira-Notation ( mcbsserv , cose )</p>
+<p><strong>Author</strong><br/>
+bmoeller</p>
+<p><strong>See Also</strong><br/>
+<p><a href="../atlassian_jira/-atlassian-jira-issue/index.html">AtlassianJiraIssue</a></p>
+</p>
+</BODY>
+</HTML>

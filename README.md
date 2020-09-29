@@ -1,8 +1,1 @@
-# AtlassianDeveloperTools
-
-Methoden zur Automation des Entwicklungsprozesses 
-Anbindung von 
-+ bamboo
-+ git
-+ jira
-+ testrail
+Dieses Repository enthält die SourceCodes zur Atlassian-Integration

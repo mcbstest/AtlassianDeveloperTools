@@ -1,0 +1,39 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>main - AtlassianDeveloperTools</title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">AtlassianDeveloperTools</a>&nbsp;/&nbsp;<a href="index.html">branch_info</a>&nbsp;/&nbsp;<a href="./main.html">main</a><br/>
+<br/>
+<h1>main</h1>
+<a name="branch_info$main(kotlin.Array((kotlin.String)))"></a>
+<code><span class="keyword">fun </span><span class="identifier">main</span><span class="symbol">(</span><span class="identifier" id="branch_info$main(kotlin.Array((kotlin.String)))/args">args</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html"><span class="identifier">Array</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Methode zur Erzeugung einer neuen Version basierend auf der semanticVersion der Issues aus der übergebenen Datei</p>
+<ul><li>die Issue werden ausgelesen und in eine Liste übertragen</li>
+<li>Zu jedem Issue werden die Komponenten ausgelesen</li>
+<li>sofern die Komponente zur übergebenen Komponente passt, wird die semanticVersion ausgelesen und in eine Liste übertragen</li>
+<li>zum Schluss wird die semanticVersion-List ausgewertet aun auf Basis der übergebenen Version und der höchsten semanticVersion eine neue Version per Datei zurückgegeben
+Aufruf :
+java -cp ./build/libs/AtlassianDeveloperTools-all-1.4.jar:. branchInfo.CreateNewVersionKt 1.0.0 ms-oidc issuelist.txt https://jira.freenet-group.de/rest/api/2/ mcbstest:password</li>
+</ul>
+<h3>Parameters</h3>
+<p><a name="version"></a>
+<code>version</code> - die anzupassende Versionskennung</p>
+<p><a name="component"></a>
+<code>component</code> - die Komponente, deren Version zu ermitteln ist</p>
+<p><a name="issueFile"></a>
+<code>issueFile</code> - die Datei mit den Issues</p>
+<p><a name="jiraURL"></a>
+<code>jiraURL</code> - die URL fuer produktiven JIRA-Zugriff</p>
+<p><a name="credentials"></a>
+<code>credentials</code> - login:password fuer produktiven JIRA-Zugriff</p>
+<p><strong>Author</strong><br/>
+bmoeller</p>
+<p><strong>See Also</strong><br/>
+<p><a href="../atlassian_jira/-atlassian-jira-issue/index.html">AtlassianJiraIssue</a></p>
+<p><a href="../general_info/-general-info/index.html">GeneralInfo</a></p>
+</p>
+</BODY>
+</HTML>

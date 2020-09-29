@@ -1,0 +1,48 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>main - AtlassianDeveloperTools</title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">AtlassianDeveloperTools</a>&nbsp;/&nbsp;<a href="index.html">db_issue2</a>&nbsp;/&nbsp;<a href="./main.html">main</a><br/>
+<br/>
+<h1>main</h1>
+<a name="db_issue2$main(kotlin.Array((kotlin.String)))"></a>
+<code><span class="keyword">fun </span><span class="identifier">main</span><span class="symbol">(</span><span class="identifier" id="db_issue2$main(kotlin.Array((kotlin.String)))/args">args</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html"><span class="identifier">Array</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Methode um JIRA-DB-Change-Orders zu erzeugen, zuzuweisen und zu beobachten</p>
+<ul><li>Erzeugung des Issue im Projekt "SPOC"</li>
+<li>interne Zuweisung zur weiteren Bearbeitung (noch nicht an DBA)</li>
+<li>Beobachter werden gesetzt</li>
+<li>die endgültige Zuweisung erfolgt manuell nach der Vervollständigung</li>
+</ul>
+<p>Aufruf :
+java -cp ./build/libs/AtlassianDeveloperTools-all-1.0.jar:. db_issue.DB_IssueKt https://jira.freenet-group.de/rest/api/2/ mcbstest:password SPOC Service-Auftrag bmoeller bmoeller,bmoeller 0.0.0099 "   q_bm_m21 und q_smo" mcbs</p>
+<h3>Parameters</h3>
+<p><a name="jiraURL"></a>
+<code>jiraURL</code> - die URL fuer produktiven JIRA-Zugriff</p>
+<p><a name="credentials"></a>
+<code>credentials</code> - login:password fuer produktiven JIRA-Zugriff</p>
+<p><a name="project"></a>
+<code>project</code> - das JiraProjekt, in dem der DB-Issue erzeugt werden soll</p>
+<p><a name="ordertype"></a>
+<code>ordertype</code> - der OrderType als Text (e.g. Aufgabe , Service-Auftrag)</p>
+<p><a name="assignee"></a>
+<code>assignee</code> - der username / login</p>
+<p><a name="watcher"></a>
+<code>watcher</code> - eine komma-separierte Liste der anzulegenden Beobachter</p>
+<p><a name="version"></a>
+<code>version</code> - die versionsnummer</p>
+<p><a name="epic"></a>
+<code>epic</code> - das Epic zum Release</p>
+<p><a name="database"></a>
+<code>database</code> - eine Zeichenkette mit den DB-Namen, die zu behandeln sind</p>
+<p><a name="product"></a>
+<code>product</code> - das betroffene Produkt (lediglich als Text)</p>
+<p><strong>Author</strong><br/>
+bmoeller</p>
+<p><strong>See Also</strong><br/>
+<p><a href="../atlassian_jira/-atlassian-jira-issue/index.html">AtlassianJiraIssue</a></p>
+</p>
+</BODY>
+</HTML>

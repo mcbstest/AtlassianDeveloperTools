@@ -1,0 +1,30 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>main - AtlassianDeveloperTools</title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">AtlassianDeveloperTools</a>&nbsp;/&nbsp;<a href="index.html">sonar_info</a>&nbsp;/&nbsp;<a href="./main.html">main</a><br/>
+<br/>
+<h1>main</h1>
+<a name="sonar_info$main(kotlin.Array((kotlin.String)))"></a>
+<code><span class="keyword">fun </span><span class="identifier">main</span><span class="symbol">(</span><span class="identifier" id="sonar_info$main(kotlin.Array((kotlin.String)))/args">args</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html"><span class="identifier">Array</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Methode zur Abfrage der TestCoverage aller in einer CSV-Datei hinterlegten Sonar-Komponenten (sonar_components.csv)</p>
+<ul><li>die Coverage wird aus Sonar ausgelesen</li>
+<li>die Steuerdatei befindet sich als csv-File im Verzeichnis jiraResources</li>
+<li>es wird eine csv-Datei mit "applikation";"coverage" erzeugt  &gt;&gt; coverage.csv</li>
+<li>die Datei sollte im Nachgang an eine geeignete Confluence-Seite angehängt werden</li>
+</ul>
+<p>Aufruf :
+java -cp ./build/libs/AtlassianDeveloperTools-all-1.0.jar:. sonar_info.SonarCoverageKt ${bamboo.sonarURL}</p>
+<h3>Parameters</h3>
+<p><a name="sonarURL"></a>
+<code>sonarURL</code> - die URL fuer produktiven Sonar-Zugriff</p>
+<p><strong>Author</strong><br/>
+bmoeller</p>
+<p><strong>See Also</strong><br/>
+<p><a href="../general_info/-general-info/index.html">GeneralInfo</a></p>
+</p>
+</BODY>
+</HTML>

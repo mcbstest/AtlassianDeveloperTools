@@ -1,0 +1,35 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>main - AtlassianDeveloperTools</title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">AtlassianDeveloperTools</a>&nbsp;/&nbsp;<a href="index.html">git_start</a>&nbsp;/&nbsp;<a href="./main.html">main</a><br/>
+<br/>
+<h1>main</h1>
+<a name="git_start$main(kotlin.Array((kotlin.String)))"></a>
+<code><span class="keyword">fun </span><span class="identifier">main</span><span class="symbol">(</span><span class="identifier" id="git_start$main(kotlin.Array((kotlin.String)))/args">args</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html"><span class="identifier">Array</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Methode zum Setzen der "version for GIT" im Epic und "GIT-version-comment" in den zugeordneten TestOrders </p>
+<ul><li>die  "version for GIT" wird gesetzt (customfield_41592)</li>
+<li>die zugeordneten TestOrders werden ausgelesen</li>
+<li>ein Kommentar "Freigegebene Version für GIT" wird angefügt</li>
+</ul>
+<p>call :
+java -cp ./build/libs/AtlassianDeveloperTools-all-1.0.jar:. git_start.GitStartKt https://jira.freenet-group.de/rest/api/2/ mcbstest:password 0.0.0099 META-152</p>
+<h3>Parameters</h3>
+<p><a name="jiraURL"></a>
+<code>jiraURL</code> - die URL fuer produktiven JIRA-Zugriff</p>
+<p><a name="credentials"></a>
+<code>credentials</code> - login:password fuer produktiven JIRA-Zugriff</p>
+<p><a name="version"></a>
+<code>version</code> - die zu hinterlegende Version</p>
+<p><a name="epic"></a>
+<code>epic</code> - das Epic für das Release</p>
+<p><strong>Author</strong><br/>
+bmoeller</p>
+<p><strong>See Also</strong><br/>
+<p><a href="../atlassian_jira/-atlassian-jira-issue/index.html">AtlassianJiraIssue</a></p>
+</p>
+</BODY>
+</HTML>

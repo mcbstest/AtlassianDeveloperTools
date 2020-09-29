@@ -1,0 +1,357 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>AtlassianJiraIssue - AtlassianDeveloperTools</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">AtlassianDeveloperTools</a>&nbsp;/&nbsp;<a href="../index.html">atlassian_jira</a>&nbsp;/&nbsp;<a href="./index.html">AtlassianJiraIssue</a><br/>
+<br/>
+<h1>AtlassianJiraIssue</h1>
+<code><span class="keyword">class </span><span class="identifier">AtlassianJiraIssue</span></code>
+<p>JIRA-API-Access</p>
+<p>Jira-Access via Atlassian-Jira-REST-API</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">AtlassianJiraIssue</span><span class="symbol">(</span><span class="identifier" id="atlassian_jira.AtlassianJiraIssue$<init>(kotlin.String, kotlin.String)/jiraURL">jiraURL</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="atlassian_jira.AtlassianJiraIssue$<init>(kotlin.String, kotlin.String)/credentials">credentials</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span></code>
+<p>setzt die JIRA-URL und die credentials</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="credentials.html">credentials</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">credentials</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code>
+<p>: login:password fuer produktiven JIRA-Zugriff</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="jira-u-r-l.html">jiraURL</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">jiraURL</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code>
+<p>: die URL fuer produktiven JIRA-Zugriff</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="logger.html">logger</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">logger</span><span class="symbol">: </span><span class="identifier">Logger</span></code>
+<p>: log4j.properties ...</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="add-comment.html">addComment</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">addComment</span><span class="symbol">(</span><span class="identifier" id="atlassian_jira.AtlassianJiraIssue$addComment(kotlin.String, kotlin.String)/issue">issue</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="atlassian_jira.AtlassianJiraIssue$addComment(kotlin.String, kotlin.String)/comment">comment</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Hinzufügen eines Kommentars zu einem gegebenen JiraIssue</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="add-fix-version.html">addFixVersion</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">addFixVersion</span><span class="symbol">(</span><span class="identifier" id="atlassian_jira.AtlassianJiraIssue$addFixVersion(kotlin.String, kotlin.String)/issue">issue</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="atlassian_jira.AtlassianJiraIssue$addFixVersion(kotlin.String, kotlin.String)/version">version</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Funktion zum Setzen der FixVersion. 
+Jira-API-Aufruf zum Schreiben der Daten eines Jira-Issues. 
+Konkret wird als Datenstruktur eine 'update'-Anweisung gesetzt, 
+das array 'fixVersions' um einen Eintrag ergaenzt  </p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="add-sprint.html">addSprint</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">addSprint</span><span class="symbol">(</span><span class="identifier" id="atlassian_jira.AtlassianJiraIssue$addSprint(kotlin.String, kotlin.String, kotlin.String)/name">name</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="atlassian_jira.AtlassianJiraIssue$addSprint(kotlin.String, kotlin.String, kotlin.String)/goal">goal</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="atlassian_jira.AtlassianJiraIssue$addSprint(kotlin.String, kotlin.String, kotlin.String)/board">board</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Funktion zum Erzeugen eines Sprints
+auf Basis einer CSV-Datei</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="add-watcher.html">addWatcher</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">addWatcher</span><span class="symbol">(</span><span class="identifier" id="atlassian_jira.AtlassianJiraIssue$addWatcher(kotlin.String, kotlin.String)/issue">issue</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="atlassian_jira.AtlassianJiraIssue$addWatcher(kotlin.String, kotlin.String)/watcher">watcher</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Hinzufuegen eines Beobachters zu einem gegebenen JiraIssue</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="create-component-version.html">createComponentVersion</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">createComponentVersion</span><span class="symbol">(</span><span class="identifier" id="atlassian_jira.AtlassianJiraIssue$createComponentVersion(kotlin.String, kotlin.String)/versionid">versionid</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="atlassian_jira.AtlassianJiraIssue$createComponentVersion(kotlin.String, kotlin.String)/component">component</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Funktion zum Erzeugen einer ComponentVersion. 
+Die uebergebene VersionsId wird mit der uebergebenen Komponente verknüpft </p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="create-error.html">createError</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">createError</span><span class="symbol">(</span><span class="identifier" id="atlassian_jira.AtlassianJiraIssue$createError(kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String)/project">project</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="atlassian_jira.AtlassianJiraIssue$createError(kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String)/summary">summary</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="atlassian_jira.AtlassianJiraIssue$createError(kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String)/description">description</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="atlassian_jira.AtlassianJiraIssue$createError(kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String)/ibn">ibn</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="atlassian_jira.AtlassianJiraIssue$createError(kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String)/comp">comp</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="atlassian_jira.AtlassianJiraIssue$createError(kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String)/awt">awt</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code>
+<p>Erzeugen eines neuen JIRA-Error</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="create-issue.html">createIssue</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">createIssue</span><span class="symbol">(</span><span class="identifier" id="atlassian_jira.AtlassianJiraIssue$createIssue(kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String)/project">project</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="atlassian_jira.AtlassianJiraIssue$createIssue(kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String)/ordertype">ordertype</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="atlassian_jira.AtlassianJiraIssue$createIssue(kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String)/version">version</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="atlassian_jira.AtlassianJiraIssue$createIssue(kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String)/summary">summary</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="atlassian_jira.AtlassianJiraIssue$createIssue(kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String)/description">description</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="atlassian_jira.AtlassianJiraIssue$createIssue(kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String)/ibn">ibn</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code>
+<p>Erzeugen eines neuen JIRA-Issue (TestOrder oder DB-Change-Order)</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="create-meta-issue.html">createMetaIssue</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">createMetaIssue</span><span class="symbol">(</span><span class="identifier" id="atlassian_jira.AtlassianJiraIssue$createMetaIssue(kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String)/mcbsrelease">mcbsrelease</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="atlassian_jira.AtlassianJiraIssue$createMetaIssue(kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String)/dev">dev</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="atlassian_jira.AtlassianJiraIssue$createMetaIssue(kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String)/git">git</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="atlassian_jira.AtlassianJiraIssue$createMetaIssue(kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String)/ibn">ibn</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="atlassian_jira.AtlassianJiraIssue$createMetaIssue(kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String)/sprintname">sprintname</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code>
+<p>Erzeugen eines neuen JIRA-META-Issue (EPIC)</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="create-version.html">createVersion</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">createVersion</span><span class="symbol">(</span><span class="identifier" id="atlassian_jira.AtlassianJiraIssue$createVersion(kotlin.String, kotlin.String)/project">project</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="atlassian_jira.AtlassianJiraIssue$createVersion(kotlin.String, kotlin.String)/version">version</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code>
+<p>Funktion zum Erzeugen einer Version. 
+Die uebergebene Versionskennung wird im uebergebenen Projekt angelegt </p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="get-components-for-issue.html">getComponentsForIssue</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getComponentsForIssue</span><span class="symbol">(</span><span class="identifier" id="atlassian_jira.AtlassianJiraIssue$getComponentsForIssue(kotlin.String)/issue">issue</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-array-list/index.html"><span class="identifier">ArrayList</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">&gt;</span></code>
+<p>Funktion zum Auslesen der Komponenten eines Jira-Issues</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="get-dependency-for-issue.html">getDependencyForIssue</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getDependencyForIssue</span><span class="symbol">(</span><span class="identifier" id="atlassian_jira.AtlassianJiraIssue$getDependencyForIssue(kotlin.String)/issue">issue</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code>
+<p>Funktion zum Auslesen der Dependency eines Jira-Issues</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="get-i-b-n-date.html">getIBNDate</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getIBNDate</span><span class="symbol">(</span><span class="identifier" id="atlassian_jira.AtlassianJiraIssue$getIBNDate(kotlin.String)/issue">issue</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code>
+<p>Auswertung des "Datum der IBN" für ein gegebenes META-Issue</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="get-issue-id.html">getIssueId</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getIssueId</span><span class="symbol">(</span><span class="identifier" id="atlassian_jira.AtlassianJiraIssue$getIssueId(kotlin.String)/issue">issue</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code>
+<p>Funktion zum Auslesen der IssueId </p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="get-issue-state.html">getIssueState</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getIssueState</span><span class="symbol">(</span><span class="identifier" id="atlassian_jira.AtlassianJiraIssue$getIssueState(kotlin.String)/issue">issue</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code>
+<p>Auslesen des state eines gegebenen JiraIssue</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="get-keywords-for-issue.html">getKeywordsForIssue</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getKeywordsForIssue</span><span class="symbol">(</span><span class="identifier" id="atlassian_jira.AtlassianJiraIssue$getKeywordsForIssue(kotlin.String)/issue">issue</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-array-list/index.html"><span class="identifier">ArrayList</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">&gt;</span></code>
+<p>Funktion zum Auslesen der Keywords eines Jira-Issues</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="get-project-components-to-map.html">getProjectComponentsToMap</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getProjectComponentsToMap</span><span class="symbol">(</span><span class="identifier" id="atlassian_jira.AtlassianJiraIssue$getProjectComponentsToMap(kotlin.String)/project">project</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="http://docs.oracle.com/javase/6/docs/api/java/util/HashMap.html"><span class="identifier">HashMap</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">,</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">&gt;</span></code>
+<p>Funktion zum Auslesen der Projektkomponenten in eine HashMap </p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="get-referenced-issue.html">getReferencedIssue</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getReferencedIssue</span><span class="symbol">(</span><span class="identifier" id="atlassian_jira.AtlassianJiraIssue$getReferencedIssue(kotlin.String)/issue">issue</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-array-list/index.html"><span class="identifier">ArrayList</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">&gt;</span></code>
+<p>Auslesen der Referenz-Issues eines gegebenen Issue</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="get-semantic-version-for-issue.html">getSemanticVersionForIssue</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getSemanticVersionForIssue</span><span class="symbol">(</span><span class="identifier" id="atlassian_jira.AtlassianJiraIssue$getSemanticVersionForIssue(kotlin.String)/issue">issue</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code>
+<p>Funktion zum Auslesen der SemanticVersion eines Jira-Issues</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="get-semantic-version-for-release-new.html">getSemanticVersionForReleaseNew</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getSemanticVersionForReleaseNew</span><span class="symbol">(</span><span class="identifier" id="atlassian_jira.AtlassianJiraIssue$getSemanticVersionForReleaseNew(kotlin.String)/version">version</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code>
+<p>Methode zur Ermittlung der SemanticVersion einer Jira-FixVersion</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="get-summary.html">getSummary</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getSummary</span><span class="symbol">(</span><span class="identifier" id="atlassian_jira.AtlassianJiraIssue$getSummary(kotlin.String)/issue">issue</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code>
+<p>Methode zur Ermittlung der Zusammenfassung eines Jira-Issue</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="get-test-order.html">getTestOrder</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getTestOrder</span><span class="symbol">(</span><span class="identifier" id="atlassian_jira.AtlassianJiraIssue$getTestOrder(kotlin.String)/issue">issue</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-array-list/index.html"><span class="identifier">ArrayList</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">&gt;</span></code>
+<p>Auslesen der TestOrders eines gegebenen META-Issue</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="link-epic.html">linkEpic</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">linkEpic</span><span class="symbol">(</span><span class="identifier" id="atlassian_jira.AtlassianJiraIssue$linkEpic(kotlin.String, kotlin.String)/issue">issue</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="atlassian_jira.AtlassianJiraIssue$linkEpic(kotlin.String, kotlin.String)/epic">epic</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Funktion zum Setzen der Epos-Version an einem Jira-Issue (customfield_13790).
+Sofern der Jira-Issue bereits geschlossen ist, wird die Aktion auf der Konsole mit "Fehler !" quittiert</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="query-req-id.html">queryReqId</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">queryReqId</span><span class="symbol">(</span><span class="identifier" id="atlassian_jira.AtlassianJiraIssue$queryReqId(kotlin.String, kotlin.String, kotlin.String)/timeSpan">timeSpan</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="atlassian_jira.AtlassianJiraIssue$queryReqId(kotlin.String, kotlin.String, kotlin.String)/issueTypes">issueTypes</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="atlassian_jira.AtlassianJiraIssue$queryReqId(kotlin.String, kotlin.String, kotlin.String)/projects">projects</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Funktion zum Auswerten einer JIRA-Query 
+Hier : Abfrage der Issues ohne AnforderungsId 
+Erzeugt eine Datei mit releavnten Infos zur weiteren Verarbeitung</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="read-properties.html">readProperties</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">readProperties</span><span class="symbol">(</span><span class="identifier" id="atlassian_jira.AtlassianJiraIssue$readProperties(kotlin.String)/propFile">propFile</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="http://docs.oracle.com/javase/6/docs/api/java/util/Properties.html"><span class="identifier">Properties</span></a></code>
+<p>Einlesen eines Property-Files aus dem jiraResources-Verzeichnis. 
+Das Property-File enthält unter dem key "components" eine Liste der zum Projekt gehörenden Komponenten 
+Der Name ergibt sich aus einer übergebenen Variablen, die im Bamboo-Kontext als Variable an das Skript übergeben werden muss. 
+Selbst erzeugte Konvention : "'Bamboo-Projekt'-'Bamboo-Plan' </p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="set-assignee.html">setAssignee</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">setAssignee</span><span class="symbol">(</span><span class="identifier" id="atlassian_jira.AtlassianJiraIssue$setAssignee(kotlin.String, kotlin.String)/issue">issue</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="atlassian_jira.AtlassianJiraIssue$setAssignee(kotlin.String, kotlin.String)/assignee">assignee</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Zuweisung eines gegebenen JiraIssue</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="set-confluence-link.html">setConfluenceLink</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">setConfluenceLink</span><span class="symbol">(</span><span class="identifier" id="atlassian_jira.AtlassianJiraIssue$setConfluenceLink(kotlin.String, kotlin.String, kotlin.String)/release">release</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="atlassian_jira.AtlassianJiraIssue$setConfluenceLink(kotlin.String, kotlin.String, kotlin.String)/title">title</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="atlassian_jira.AtlassianJiraIssue$setConfluenceLink(kotlin.String, kotlin.String, kotlin.String)/issue">issue</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Funktion zum Setzen eines remote-links an einem Jira-Issue</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="set-git-version.html">setGitVersion</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">setGitVersion</span><span class="symbol">(</span><span class="identifier" id="atlassian_jira.AtlassianJiraIssue$setGitVersion(kotlin.String, kotlin.String)/issue">issue</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="atlassian_jira.AtlassianJiraIssue$setGitVersion(kotlin.String, kotlin.String)/version">version</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Setzen der "Version for Git"</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="set-issue-state.html">setIssueState</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">setIssueState</span><span class="symbol">(</span><span class="identifier" id="atlassian_jira.AtlassianJiraIssue$setIssueState(kotlin.String, kotlin.String)/issue">issue</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="atlassian_jira.AtlassianJiraIssue$setIssueState(kotlin.String, kotlin.String)/transition">transition</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Setzen des Status eines gegebenen JiraIssue</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="set-prod-version.html">setProdVersion</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">setProdVersion</span><span class="symbol">(</span><span class="identifier" id="atlassian_jira.AtlassianJiraIssue$setProdVersion(kotlin.String, kotlin.String)/issue">issue</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="atlassian_jira.AtlassianJiraIssue$setProdVersion(kotlin.String, kotlin.String)/version">version</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Setzen der "Version for Prod"</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="set-test-order.html">setTestOrder</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">setTestOrder</span><span class="symbol">(</span><span class="identifier" id="atlassian_jira.AtlassianJiraIssue$setTestOrder(kotlin.String, kotlin.String)/issue">issue</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="atlassian_jira.AtlassianJiraIssue$setTestOrder(kotlin.String, kotlin.String)/testOrder">testOrder</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Setzen einer Releation zwischen META-Issue und Test-Order</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="set-test-version.html">setTestVersion</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">setTestVersion</span><span class="symbol">(</span><span class="identifier" id="atlassian_jira.AtlassianJiraIssue$setTestVersion(kotlin.String, kotlin.String)/issue">issue</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="atlassian_jira.AtlassianJiraIssue$setTestVersion(kotlin.String, kotlin.String)/version">version</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Setzen der "Version for Test"</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

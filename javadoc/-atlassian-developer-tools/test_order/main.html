@@ -1,0 +1,51 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>main - AtlassianDeveloperTools</title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">AtlassianDeveloperTools</a>&nbsp;/&nbsp;<a href="index.html">test_order</a>&nbsp;/&nbsp;<a href="./main.html">main</a><br/>
+<br/>
+<h1>main</h1>
+<a name="test_order$main(kotlin.Array((kotlin.String)))"></a>
+<code><span class="keyword">fun </span><span class="identifier">main</span><span class="symbol">(</span><span class="identifier" id="test_order$main(kotlin.Array((kotlin.String)))/args">args</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html"><span class="identifier">Array</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Method to create , assign and watch JIRA-TestOrders.</p>
+<ul><li>If this is the first build of a release (bamboo-buildnumber = 1) then the version x.y.z (for the headline of the issue) is cut to x.y .</li>
+<li>If the buildnumber is higher, the version is taken completely (x.y.z) .</li>
+<li>Issue is created , assigned (internal), watchers are added</li>
+<li>planned activation-date is read out of epic and added to content .</li>
+<li>testorder is related to epic</li>
+</ul>
+<p>Aufruf :
+java -cp ./build/libs/AtlassianDeveloperTools-all-1.0.jar:. test_order.TestOrderKt https://jira.freenet-group.de/rest/api/2/ mcbstest:password MCBS Auftrag bmoeller bmoeller,bmoeller 0.0.0099 META-152 1 "Z,T,C,A,B,K,G,S"</p>
+<h3>Parameters</h3>
+<p><a name="jiraURL"></a>
+<code>jiraURL</code> - die URL fuer produktiven JIRA-Zugriff</p>
+<p><a name="credentials"></a>
+<code>credentials</code> - login:password fuer produktiven JIRA-Zugriff</p>
+<p><a name="project"></a>
+<code>project</code> - das JiraProjekt , in dem die TestOrder anzulegen ist</p>
+<p><a name="ordertype"></a>
+<code>ordertype</code> - der OrderType (e.g. Aufgabe , Service-Auftrag)</p>
+<p><a name="assignee"></a>
+<code>assignee</code> - der zuzuweisende username / login</p>
+<p><a name="watcher"></a>
+<code>watcher</code> - eine komma-separierte Liste der einzutragenden Beobachter</p>
+<p><a name="version"></a>
+<code>version</code> - die Version</p>
+<p><a name="epic"></a>
+<code>epic</code> - das Epic zum Release</p>
+<p><a name="buildnumber"></a>
+<code>buildnumber</code> - die aktuelle bamboo-buildnumber</p>
+<p><a name="testjob"></a>
+<code>testjob</code> - eine komma-separierte Liste von Großbuchstaben als Abkürzung für die zu erzeugenden TestOrders. TestOrder-Inhalt wird gelesen aus "./jiraResources/TestOrderText.txt"</p>
+<p><strong>Author</strong><br/>
+bmoeller</p>
+<p><strong>See Also</strong><br/>
+<p><a href="../atlassian_jira/-atlassian-jira-issue/index.html">AtlassianJiraIssue</a></p>
+</p>
+<p><strong>Since</strong><br/>
+1.0</p>
+</BODY>
+</HTML>

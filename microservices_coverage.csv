@@ -1,0 +1,15 @@
+Applikation;Testabdeckung 
+ms-authoritiesinformation;0.0%
+ms-billingaccount-frontend;81.0%
+ms-businesstransaction;82.7%
+ms-commondata;91.9%
+ms-contentprovider;91.0%
+ms-customerchange;80.3%
+ms-elasticupdate;0.0%
+ms-gateway;88.5%
+ms-invoice;81.5%
+ms-oidc;82.7%
+ms-proxy-support;93.5%
+ms-rating;85.5%
+ms-user;82.6%
+mslib-rest;0.0%

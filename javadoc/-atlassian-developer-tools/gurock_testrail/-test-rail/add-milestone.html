@@ -1,0 +1,38 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>TestRail.addMilestone - AtlassianDeveloperTools</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">AtlassianDeveloperTools</a>&nbsp;/&nbsp;<a href="../index.html">gurock_testrail</a>&nbsp;/&nbsp;<a href="index.html">TestRail</a>&nbsp;/&nbsp;<a href="./add-milestone.html">addMilestone</a><br/>
+<br/>
+<h1>addMilestone</h1>
+<a name="gurock_testrail.TestRail$addMilestone(kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String)"></a>
+<code><span class="keyword">fun </span><span class="identifier">addMilestone</span><span class="symbol">(</span><span class="identifier" id="gurock_testrail.TestRail$addMilestone(kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String)/prjid">prjid</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="gurock_testrail.TestRail$addMilestone(kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String)/number">number</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="gurock_testrail.TestRail$addMilestone(kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String)/name">name</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="gurock_testrail.TestRail$addMilestone(kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String)/dev">dev</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="gurock_testrail.TestRail$addMilestone(kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String)/git">git</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="gurock_testrail.TestRail$addMilestone(kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String)/ibn">ibn</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Funktion zum Anlegen eines TestRail-Milestones</p>
+<ul><li>Name-Pattern : "{Sprintnumber}-IBN! {name}</li>
+<li>Description : Dev : xx-yy , GIT: xx-yy</li>
+<li>Due_on : IBN</li>
+</ul>
+<h3>Parameters</h3>
+<p><a name="prjid"></a>
+<code>prjid</code> - Die Id des Projektes , in dem der Milestone angelegt wird</p>
+<p><a name="number"></a>
+<code>number</code> - Die MCBS-Core-Sprintnummer (wie in Jira)</p>
+<p><a name="name"></a>
+<code>name</code> - Der Name des Sprints im Klartext</p>
+<p><a name="dev"></a>
+<code>dev</code> - Der Entwicklungszeitraum als String</p>
+<p><a name="git"></a>
+<code>git</code> - Der Testzeitraum als String</p>
+<p><a name="ibn"></a>
+<code>ibn</code> - Der Inbetriebnahmetermin</p>
+<p><strong>Author</strong><br/>
+Bernd Moeller</p>
+<p><strong>Version</strong><br/>
+1.95</p>
+<p><strong>Since</strong><br/>
+1.0</p>
+</BODY>
+</HTML>

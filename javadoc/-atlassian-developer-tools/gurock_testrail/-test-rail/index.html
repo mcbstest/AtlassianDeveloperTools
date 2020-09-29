@@ -1,0 +1,190 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>TestRail - AtlassianDeveloperTools</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">AtlassianDeveloperTools</a>&nbsp;/&nbsp;<a href="../index.html">gurock_testrail</a>&nbsp;/&nbsp;<a href="./index.html">TestRail</a><br/>
+<br/>
+<h1>TestRail</h1>
+<code><span class="keyword">class </span><span class="identifier">TestRail</span></code>
+<p>Klasse zur TestRail-Kommunikation</p>
+<ul><li>Auslesen der Projekte</li>
+<li>Auslesen der Strukturen (Suites , Sections)</li>
+<li>Auslesen der TestCases</li>
+<li>Erzeugen von TestRuns</li>
+<li>Erzeugen von TestResults</li>
+</ul>
+<h3>Parameters</h3>
+<p><a name="testrailURL"></a>
+<code>testrailURL</code> - Die TestRail-URL für die Etablierung des Zugriffs</p>
+<p><a name="testrailUser"></a>
+<code>testrailUser</code> - Das Login zu TestRail (in LDAP bekannt, eindeutige E-Mail-Adresse , API-Key in TestRail erzeugt)</p>
+<p><a name="testrailPasswd"></a>
+<code>testrailPasswd</code> - Das Passwort dazu</p>
+<p><strong>Author</strong><br/>
+Bernd Moeller</p>
+<p><strong>Version</strong><br/>
+1.0</p>
+<p><strong>Since</strong><br/>
+1.0</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">TestRail</span><span class="symbol">(</span><span class="identifier" id="gurock_testrail.TestRail$<init>(kotlin.String, kotlin.String, kotlin.String)/testrailURL">testrailURL</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="gurock_testrail.TestRail$<init>(kotlin.String, kotlin.String, kotlin.String)/testrailUser">testrailUser</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="gurock_testrail.TestRail$<init>(kotlin.String, kotlin.String, kotlin.String)/testrailPasswd">testrailPasswd</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span></code>
+<p>Klasse zur TestRail-Kommunikation</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="logger.html">logger</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">logger</span><span class="symbol">: </span><span class="identifier">Logger</span></code>
+<p>Logging</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="testrail-client.html">testrailClient</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">testrailClient</span><span class="symbol">: </span><a href="../-a-p-i-client/index.html"><span class="identifier">APIClient</span></a></code>
+<p>Instanz zum Aufruf der testRail-Methoden</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="testrail-user.html">testrailUser</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">testrailUser</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code>
+<p>User-Account zur TestRail-Anmeldung ( LDAP )</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="add-milestone.html">addMilestone</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">addMilestone</span><span class="symbol">(</span><span class="identifier" id="gurock_testrail.TestRail$addMilestone(kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String)/prjid">prjid</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="gurock_testrail.TestRail$addMilestone(kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String)/number">number</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="gurock_testrail.TestRail$addMilestone(kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String)/name">name</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="gurock_testrail.TestRail$addMilestone(kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String)/dev">dev</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="gurock_testrail.TestRail$addMilestone(kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String)/git">git</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="gurock_testrail.TestRail$addMilestone(kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String)/ibn">ibn</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Funktion zum Anlegen eines TestRail-Milestones</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="add-testresult.html">addTestresult</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">addTestresult</span><span class="symbol">(</span><span class="identifier" id="gurock_testrail.TestRail$addTestresult(kotlin.String, kotlin.String, kotlin.String, kotlin.String)/testId">testId</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="gurock_testrail.TestRail$addTestresult(kotlin.String, kotlin.String, kotlin.String, kotlin.String)/status">status</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="gurock_testrail.TestRail$addTestresult(kotlin.String, kotlin.String, kotlin.String, kotlin.String)/version">version</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="gurock_testrail.TestRail$addTestresult(kotlin.String, kotlin.String, kotlin.String, kotlin.String)/comment">comment</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code>
+<p>Funktion zum Anlegen eines TestResults</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="add-testrun.html">addTestrun</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">addTestrun</span><span class="symbol">(</span><span class="identifier" id="gurock_testrail.TestRail$addTestrun(kotlin.String, kotlin.String, kotlin.String, kotlin.String)/prjId">prjId</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="gurock_testrail.TestRail$addTestrun(kotlin.String, kotlin.String, kotlin.String, kotlin.String)/suiteId">suiteId</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="gurock_testrail.TestRail$addTestrun(kotlin.String, kotlin.String, kotlin.String, kotlin.String)/testcaseId">testcaseId</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="gurock_testrail.TestRail$addTestrun(kotlin.String, kotlin.String, kotlin.String, kotlin.String)/testrunName">testrunName</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code>
+<p>Funktion zum Anlegen eines TestRail-Testrunn</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="close-test-run.html">closeTestRun</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">closeTestRun</span><span class="symbol">(</span><span class="identifier" id="gurock_testrail.TestRail$closeTestRun(kotlin.String)/testrunId">testrunId</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="get-milestone-by-name.html">getMilestoneByName</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getMilestoneByName</span><span class="symbol">(</span><span class="identifier" id="gurock_testrail.TestRail$getMilestoneByName(kotlin.String, kotlin.String)/prjId">prjId</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="gurock_testrail.TestRail$getMilestoneByName(kotlin.String, kotlin.String)/milestoneName">milestoneName</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code>
+<p>Funktion zum Auslesen der MilestoneId</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="get-prj-by-name.html">getPrjByName</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getPrjByName</span><span class="symbol">(</span><span class="identifier" id="gurock_testrail.TestRail$getPrjByName(kotlin.String)/prjName">prjName</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code>
+<p>Funktion zum Auslesen der TestRail-Projekt-Id</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="get-section-by-name.html">getSectionByName</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getSectionByName</span><span class="symbol">(</span><span class="identifier" id="gurock_testrail.TestRail$getSectionByName(kotlin.String, kotlin.String, kotlin.String)/prjId">prjId</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="gurock_testrail.TestRail$getSectionByName(kotlin.String, kotlin.String, kotlin.String)/suiteId">suiteId</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="gurock_testrail.TestRail$getSectionByName(kotlin.String, kotlin.String, kotlin.String)/sectionName">sectionName</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code>
+<p>Funktion zum Auslesen der TestRail-Section-Id</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="get-suite-by-name.html">getSuiteByName</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getSuiteByName</span><span class="symbol">(</span><span class="identifier" id="gurock_testrail.TestRail$getSuiteByName(kotlin.String, kotlin.String)/prjId">prjId</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="gurock_testrail.TestRail$getSuiteByName(kotlin.String, kotlin.String)/suiteName">suiteName</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code>
+<p>Funktion zum Auslesen der TestRail-Suite-Id</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="get-testcase-by-name.html">getTestcaseByName</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getTestcaseByName</span><span class="symbol">(</span><span class="identifier" id="gurock_testrail.TestRail$getTestcaseByName(kotlin.String, kotlin.String, kotlin.String, kotlin.String)/prjId">prjId</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="gurock_testrail.TestRail$getTestcaseByName(kotlin.String, kotlin.String, kotlin.String, kotlin.String)/suiteId">suiteId</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="gurock_testrail.TestRail$getTestcaseByName(kotlin.String, kotlin.String, kotlin.String, kotlin.String)/sectionId">sectionId</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="gurock_testrail.TestRail$getTestcaseByName(kotlin.String, kotlin.String, kotlin.String, kotlin.String)/testcaseName">testcaseName</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code>
+<p>Funktion zum Auslesen der TestRail-Section-Id</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="get-testrun-by-name.html">getTestrunByName</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getTestrunByName</span><span class="symbol">(</span><span class="identifier" id="gurock_testrail.TestRail$getTestrunByName(kotlin.String, kotlin.String)/prjId">prjId</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="gurock_testrail.TestRail$getTestrunByName(kotlin.String, kotlin.String)/testrunName">testrunName</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code>
+<p>Funktion zum Auslesen der TestrunId</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="get-tests.html">getTests</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getTests</span><span class="symbol">(</span><span class="identifier" id="gurock_testrail.TestRail$getTests(kotlin.String, kotlin.String)/testrunId">testrunId</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="gurock_testrail.TestRail$getTests(kotlin.String, kotlin.String)/testcaseName">testcaseName</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code>
+<p>Funktion zum Auslesen der Id eines Tests eines Testrun</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="set-milestone.html">setMilestone</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">setMilestone</span><span class="symbol">(</span><span class="identifier" id="gurock_testrail.TestRail$setMilestone(kotlin.String, kotlin.String)/testrunId">testrunId</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="gurock_testrail.TestRail$setMilestone(kotlin.String, kotlin.String)/milestoneId">milestoneId</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code>
+<p>Funktion zum Setzen des Milestones an einem Testrun</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

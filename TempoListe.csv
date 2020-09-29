@@ -1,0 +1,21 @@
+Jira-Issue ; Summary ; Datum ; AnforderungsId ; Komponente ; zuletzt zugewiesen
+https://jira.freenet-group.de/browse/ABRMS-1046 ; MS-BillingAccount: PaymentAccount Endpunkte implementieren ; 03.09.2019 ; null ; ms-commondata ; Andreas.David-Studt@md.de
+https://jira.freenet-group.de/browse/ABRMS-1823 ; Hoher Speicherverbrauch bei Microservices ; 03.09.2019 ; null ; ms-commondata ; Frank.Scheer@md.de
+https://jira.freenet-group.de/browse/ABRMS-1834 ; ProductOwner in CustomerProduct liefern ; 03.09.2019 ; null ; ms-commondata ; Frank.Scheer@md.de
+https://jira.freenet-group.de/browse/ABRMS-1854 ; /productTerms soll nicht den Namen von zukünftigen Tarifen liefern ; 03.09.2019 ; PRIOMD-6684 ; ms-commondata ; Frank.Scheer@md.de
+https://jira.freenet-group.de/browse/MCBS-2735 ; CPE: Datentyp der Spalte aggregated_usages.id  auf INT8 umstellen ; 03.09.2019 ; PRIOMD-6684 ; ms-commondata ; Haluk.Asaroez@md.de
+https://jira.freenet-group.de/browse/MCBS-2745 ; Auskunft über Segmente datumsabhängig gestalten ; 03.09.2019 ; null ; ms-commondata ; Soenke.Mueller-Lund@md.de
+https://jira.freenet-group.de/browse/MCBS-2751 ; String Interning für Konfigurationsdaten ; 03.09.2019 ; null ; ms-commondata ; Frank.Scheer@md.de
+https://jira.freenet-group.de/browse/MCBS-2752 ; CPE: Index auf Spalte calls.handlingmode  ; 03.09.2019 ; PRIOMD-6684 ; ms-commondata ; Haluk.Asaroez@md.de
+https://jira.freenet-group.de/browse/MCBS-2765 ; PRIOMD-6302: Storno Ruela-Container - modifiableByMcis-Feld anpassen  ; 03.09.2019 ; PRIOMD-6302 ; ms-commondata ; Christian.Erich@md.de
+https://jira.freenet-group.de/browse/MCBS-2767 ; CPE: Index pk_aggregatedusages umbenennen ; 03.09.2019 ; PRIOMD-6684 ; ms-commondata ; Haluk.Asaroez@md.de
+https://jira.freenet-group.de/browse/ABRMS-1046 ; MS-BillingAccount: PaymentAccount Endpunkte implementieren ; 20.11.2019 ; null ; ms-commondata ; Andreas.David-Studt@md.de
+https://jira.freenet-group.de/browse/ABRMS-1823 ; Hoher Speicherverbrauch bei Microservices ; 20.11.2019 ; PRIOMD-6637 ; ms-commondata ; Frank.Scheer@md.de
+https://jira.freenet-group.de/browse/ABRMS-1834 ; ProductOwner in CustomerProduct liefern ; 20.11.2019 ; SPOC-254965 ; ms-commondata ; Frank.Scheer@md.de
+https://jira.freenet-group.de/browse/ABRMS-1854 ; /productTerms soll nicht den Namen von zukünftigen Tarifen liefern ; 20.11.2019 ; PRIOMD-6684 ; ms-commondata ; Frank.Scheer@md.de
+https://jira.freenet-group.de/browse/MCBS-2735 ; CPE: Datentyp der Spalte aggregated_usages.id  auf INT8 umstellen ; 20.11.2019 ; PRIOMD-6684 ; ms-commondata ; Haluk.Asaroez@md.de
+https://jira.freenet-group.de/browse/MCBS-2745 ; Auskunft über Segmente datumsabhängig gestalten ; 20.11.2019 ; PRIOMD-6684 ; ms-commondata ; Soenke.Mueller-Lund@md.de
+https://jira.freenet-group.de/browse/MCBS-2751 ; String Interning für Konfigurationsdaten ; 20.11.2019 ; PRIOMD-6637 ; ms-commondata ; Frank.Scheer@md.de
+https://jira.freenet-group.de/browse/MCBS-2752 ; CPE: Index auf Spalte calls.handlingmode  ; 20.11.2019 ; PRIOMD-6684 ; ms-commondata ; Haluk.Asaroez@md.de
+https://jira.freenet-group.de/browse/MCBS-2765 ; PRIOMD-6302: Storno Ruela-Container - modifiableByMcis-Feld anpassen  ; 20.11.2019 ; PRIOMD-6302 ; ms-commondata ; Christian.Erich@md.de
+https://jira.freenet-group.de/browse/MCBS-2767 ; CPE: Index pk_aggregatedusages umbenennen ; 20.11.2019 ; PRIOMD-6684 ; ms-commondata ; Haluk.Asaroez@md.de

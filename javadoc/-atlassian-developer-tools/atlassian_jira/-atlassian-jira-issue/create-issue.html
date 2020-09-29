@@ -1,0 +1,28 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>AtlassianJiraIssue.createIssue - AtlassianDeveloperTools</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">AtlassianDeveloperTools</a>&nbsp;/&nbsp;<a href="../index.html">atlassian_jira</a>&nbsp;/&nbsp;<a href="index.html">AtlassianJiraIssue</a>&nbsp;/&nbsp;<a href="./create-issue.html">createIssue</a><br/>
+<br/>
+<h1>createIssue</h1>
+<a name="atlassian_jira.AtlassianJiraIssue$createIssue(kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String)"></a>
+<code><span class="keyword">fun </span><span class="identifier">createIssue</span><span class="symbol">(</span><span class="identifier" id="atlassian_jira.AtlassianJiraIssue$createIssue(kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String)/project">project</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="atlassian_jira.AtlassianJiraIssue$createIssue(kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String)/ordertype">ordertype</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="atlassian_jira.AtlassianJiraIssue$createIssue(kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String)/version">version</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="atlassian_jira.AtlassianJiraIssue$createIssue(kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String)/summary">summary</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="atlassian_jira.AtlassianJiraIssue$createIssue(kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String)/description">description</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="atlassian_jira.AtlassianJiraIssue$createIssue(kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String)/ibn">ibn</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code>
+<p>Erzeugen eines neuen JIRA-Issue (TestOrder oder DB-Change-Order)</p>
+<h3>Parameters</h3>
+<p><a name="project"></a>
+<code>project</code> - das JiraProjekt, in dem der Issue zu erzeugen ist (e.g. MCBS)</p>
+<p><a name="ordertype"></a>
+<code>ordertype</code> - der jira-order-type als text (e.g. Aufgabe , Service-Auftrag)</p>
+<p><a name="summary"></a>
+<code>summary</code> - die brief-description / headline (QS :: Version : Summary)</p>
+<p><a name="description"></a>
+<code>description</code> - der eigentliche Inhalt des Issue</p>
+<p><a name="ibn"></a>
+<code>ibn</code> - der mögliche Zieltermin (e.g. IBN! : xx.yy.zzzz OR " " )</p>
+<p><strong>Return</strong><br/>
+die Systemantwort</p>
+</BODY>
+</HTML>

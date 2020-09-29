@@ -1,0 +1,120 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>GeneralInfo - AtlassianDeveloperTools</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">AtlassianDeveloperTools</a>&nbsp;/&nbsp;<a href="../index.html">general_info</a>&nbsp;/&nbsp;<a href="./index.html">GeneralInfo</a><br/>
+<br/>
+<h1>GeneralInfo</h1>
+<code><span class="keyword">class </span><span class="identifier">GeneralInfo</span></code>
+<p>General Info</p>
+<p>Mail-Info per Mail basierend auf einem Template</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">GeneralInfo</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>General Info</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="logger.html">logger</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">logger</span><span class="symbol">: </span><span class="identifier">Logger</span></code>
+<p>: log4j.properties ...</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="create-new-m-c-b-s-component-version.html">createNewMCBSComponentVersion</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">createNewMCBSComponentVersion</span><span class="symbol">(</span><span class="identifier" id="general_info.GeneralInfo$createNewMCBSComponentVersion(kotlin.String, kotlin.String)/version">version</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="general_info.GeneralInfo$createNewMCBSComponentVersion(kotlin.String, kotlin.String)/semVer">semVer</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code>
+<p>Methode zur Erzeugung einer neuen Versionskennung basierend auf der bisherigen unter Berücksichtigung einer zu übergebenden SemanticVersion</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="create-new-version.html">createNewVersion</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">createNewVersion</span><span class="symbol">(</span><span class="identifier" id="general_info.GeneralInfo$createNewVersion(kotlin.String, kotlin.String)/version">version</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="general_info.GeneralInfo$createNewVersion(kotlin.String, kotlin.String)/semVer">semVer</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code>
+<p>Methode zur Erzeugung einer neuen Versionskennung basierend auf der bisherigen unter Berücksichtigung einer zu übergebenden SemanticVersion</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="get-issue-builds.html">getIssueBuilds</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getIssueBuilds</span><span class="symbol">(</span><span class="identifier" id="general_info.GeneralInfo$getIssueBuilds(kotlin.String)/issueId">issueId</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Methode zur Ermittlung der Details (Builds)  eines Tickets</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="get-issue-deployments.html">getIssueDeployments</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getIssueDeployments</span><span class="symbol">(</span><span class="identifier" id="general_info.GeneralInfo$getIssueDeployments(kotlin.String)/issueId">issueId</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Methode zur Ermittlung der Details (Deployments and Environments)  eines Tickets</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="get-issue-pull-requests.html">getIssuePullRequests</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getIssuePullRequests</span><span class="symbol">(</span><span class="identifier" id="general_info.GeneralInfo$getIssuePullRequests(kotlin.String)/issueId">issueId</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Methode zur Ermittlung der Details (PullRequests)  eines Tickets</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="get-proxy-version.html">getProxyVersion</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getProxyVersion</span><span class="symbol">(</span><span class="identifier" id="general_info.GeneralInfo$getProxyVersion(kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String)/stage">stage</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="general_info.GeneralInfo$getProxyVersion(kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String)/label">label</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="general_info.GeneralInfo$getProxyVersion(kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String)/proxy">proxy</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="general_info.GeneralInfo$getProxyVersion(kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String)/microservice">microservice</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="general_info.GeneralInfo$getProxyVersion(kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String)/proxyservice">proxyservice</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code>
+<p>Methode zur Ermittlung der Proxy- und Microservice-Versionen</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="get-sonar-coverage.html">getSonarCoverage</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getSonarCoverage</span><span class="symbol">(</span><span class="identifier" id="general_info.GeneralInfo$getSonarCoverage(kotlin.String, kotlin.String, kotlin.String, kotlin.String)/sonarURL">sonarURL</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="general_info.GeneralInfo$getSonarCoverage(kotlin.String, kotlin.String, kotlin.String, kotlin.String)/sonarCompA">sonarCompA</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="general_info.GeneralInfo$getSonarCoverage(kotlin.String, kotlin.String, kotlin.String, kotlin.String)/sonarCompP">sonarCompP</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="general_info.GeneralInfo$getSonarCoverage(kotlin.String, kotlin.String, kotlin.String, kotlin.String)/metricKey">metricKey</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code>
+<p>Methode zur Ermittlung der TestCoverage einer Komponente via Sonar</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="send-mail.html">sendMail</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">sendMail</span><span class="symbol">(</span><span class="identifier" id="general_info.GeneralInfo$sendMail(kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String)/product">product</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="general_info.GeneralInfo$sendMail(kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String)/version">version</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="general_info.GeneralInfo$sendMail(kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String)/deployed">deployed</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="general_info.GeneralInfo$sendMail(kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String)/sql">sql</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="general_info.GeneralInfo$sendMail(kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String)/config">config</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="general_info.GeneralInfo$sendMail(kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String)/dependency">dependency</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="general_info.GeneralInfo$sendMail(kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String)/mailaddress">mailaddress</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="general_info.GeneralInfo$sendMail(kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String)/templatefile">templatefile</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="general_info.GeneralInfo$sendMail(kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String)/extra">extra</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="general_info.GeneralInfo$sendMail(kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String)/headline">headline</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="general_info.GeneralInfo$sendMail(kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String)/jiraquery">jiraquery</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="general_info.GeneralInfo$sendMail(kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String, kotlin.String)/date1">date1</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Methode zum Versand einer E-Mail. </p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>
