@@ -15,16 +15,16 @@ import java.util.*
  * Aufruf :
  * java -cp ./build/libs/AtlassianDeveloperTools-all-1.0.jar:. db_issue.DB_IssueKt https://jira.freenet-group.de/rest/api/2/ mcbstest:password SPOC Service-Auftrag bmoeller bmoeller,bmoeller 0.0.0099 "   q_bm_m21 und q_smo" mcbs
  *
- * @param "jiraURL" die URL fuer produktiven JIRA-Zugriff
- * @param "credentials] login:password fuer produktiven JIRA-Zugriff
- * @param "project] das JiraProjekt, in dem der DB-Issue erzeugt werden soll
- * @param "ordertype] der OrderType als Text (e.g. Aufgabe , Service-Auftrag)
- * @param "assignee] der username / login
- * @param "watcher] eine komma-separierte Liste der anzulegenden Beobachter
- * @param "version] die versionsnummer
- * @param "epic] das Epic zum Release
- * @param "database] eine Zeichenkette mit den DB-Namen, die zu behandeln sind
- * @param "product] das betroffene Produkt (lediglich als Text)
+ * @param [jiraURL] die URL fuer produktiven JIRA-Zugriff
+ * @param [credentials] login:password fuer produktiven JIRA-Zugriff
+ * @param [project] das JiraProjekt, in dem der DB-Issue erzeugt werden soll
+ * @param [ordertype] der OrderType als Text (e.g. Aufgabe , Service-Auftrag)
+ * @param [assignee] der username / login
+ * @param [watcher] eine komma-separierte Liste der anzulegenden Beobachter
+ * @param [version] die versionsnummer
+ * @param [epic] das Epic zum Release
+ * @param [database] eine Zeichenkette mit den DB-Namen, die zu behandeln sind
+ * @param [product] das betroffene Produkt (lediglich als Text)
  *
  * @author bmoeller
  *
