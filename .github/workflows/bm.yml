@@ -24,11 +24,11 @@ jobs:
     - name: Build with Gradle
       run: ./gradlew clean build fatJar dokka
 
-    -name: Ausgabe
-     run: echo "Fertig !!"
+    - name: Ausgabe
+      run: echo "Fertig !!"
      
-    -name "Dir"
-    run: cd build
+    - name "Dir"
+      run: cd build
     
-    -name dir
-    run: ls -ali
+    - name dir
+      run: ls -ali
