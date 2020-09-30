@@ -27,8 +27,8 @@ jobs:
     - name: Ausgabe
       run: echo "Fertig !!"
      
-    - name "Dir"
+    - name: Dir
       run: cd build
     
-    - name dir
+    - name: dir
       run: ls -ali
