@@ -32,3 +32,9 @@ jobs:
     
     - name: dir
       run: ls -ali
+      
+    - name: Archive code coverage results
+      uses: actions/upload-artifact@v1
+      with:
+        name: bmrelease
+        path: build/libs
