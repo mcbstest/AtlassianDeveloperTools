@@ -19,5 +19,16 @@ jobs:
         java-version: 11
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
+      
+      
     - name: Build with Gradle
       run: ./gradlew clean build fatJar dokka
+
+    -name: Ausgabe
+     run: echo "Fertig !!"
+     
+    -name "Dir"
+    run: cd build
+    
+    -name dir
+    run: ls -ali
