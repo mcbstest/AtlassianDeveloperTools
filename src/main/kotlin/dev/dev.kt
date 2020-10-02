@@ -269,8 +269,10 @@ fun main(args : Array<String>) {
    //j.getIssueId("ABRMS-2363")
 
     // get components
-    val componentList = j.getComponentsForIssue("ABC-3007.xml")
-    logger.info(componentList.toString())
-    println("!?")
+    //val componentList = j.getComponentsForIssue("ABC-3007.xml")
+
+
+    val b = AtlassianBambooInfo("https://bambooweb.mobilcom.de/rest/api/latest/result/", "mcbstest:qs_mcbs_11")
+    b.createReleaseVersion("206799092","ABRMS-VER-1204","bm-version_999998")
 
 }

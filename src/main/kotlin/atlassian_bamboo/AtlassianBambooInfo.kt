@@ -146,4 +146,35 @@ class AtlassianBambooInfo(val bambooURL : String, val credentials : String) {
         }
     }
 
+    /**
+     * Funktion zum Erzeugen einer für das Deployment erforderlichen Release-Version
+     *
+     * @param [??]
+     *
+     * @return ??
+     *
+     * @author Bernd Moeller
+     *
+     * @version 1.0
+     *
+     * @since 1.0
+     */
+    fun createReleaseVersion(project : String , planResultKey : String , version : String) {
+        // Authentifikation
+        val auth = String(Base64.encode(credentials))
+        // Client einrichten
+        val client = Client.create()
+        // data
+        val data = "{\"planResultKey\": \"${planResultKey}\",\"name\": \"${version}\"}"
+        // URL setzen
+        try {
+            val webResource = client.resource("https://bambooweb.mobilcom.de/rest/api/latest/deploy/project/${project}/version")
+            val response = webResource.header("Authorization", "Basic $auth").type("application/json").accept("application/json").post(String::class.java, data)
+            logger.debug("Result : $response")
+        } catch(e : Exception) {
+            logger.info("Fehler beim Anlegen der Version ...")
+            logger.info(e.printStackTrace())
+        }
+
+    }
 }
