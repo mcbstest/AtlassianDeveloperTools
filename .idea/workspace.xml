@@ -1,18 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d88d6d90-cba0-456e-8fae-9a1f11102f32" name="Default Changelist" comment="set comment">
-      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="d88d6d90-cba0-456e-8fae-9a1f11102f32" name="Default Changelist" comment="typo">
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/bamboo_version/createBambooDeploymentVersion.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/dev/dev.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/dev/dev.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,6 +59,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="ADS\bmoeller &lt;bernd.moeller@md.de&gt;logger.info(&quot;Response : $response.status&quot;)" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1ZDWjcYZAOfozU7JNgQzSmfstyN" />
@@ -97,7 +98,7 @@
       <command value="gradle clean build fatJar dokka" />
     </option>
   </component>
-  <component name="RunManager" selected="Kotlin.DevKt">
+  <component name="RunManager" selected="Kotlin.createBambooDeploymentVersion">
     <configuration name="AtlassianDeveloperTools [clean build fatJar dokka]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -332,6 +333,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="createBambooDeploymentVersion" type="JetRunConfigurationType">
+      <module name="AtlassianDeveloperTools.main" />
+      <option name="VM_PARAMETERS" value="-Dlog4j.configuration=file:C:\bm\AtlassianDeveloperTools\log4j_debug.properties" />
+      <option name="PROGRAM_PARAMETERS" value="https://bambooweb.mobilcom.de/rest/api/latest/result/ mcbstest:qs_mcbs_11 &quot;206799092&quot;  ABRMS-VER-1204  bm-version_999998" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" value="bamboo_version.CreateBambooDeploymentVersionKt" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="getCoverage" type="JetRunConfigurationType">
       <module name="AtlassianDeveloperTools" />
       <option name="VM_PARAMETERS" value="-Dlog4j.configuration=file:C:\bm\AtlassianDeveloperTools\log4j_debug.properties" />
@@ -416,6 +430,7 @@
       <item itemvalue="Kotlin.DBChangeCopyInfo" />
       <item itemvalue="Kotlin.setFixVersion" />
       <item itemvalue="Kotlin.IssueInfo" />
+      <item itemvalue="Kotlin.createBambooDeploymentVersion" />
       <item itemvalue="Kotlin.SprintInfoKt" />
       <item itemvalue="Kotlin.DevKt" />
     </list>
@@ -461,7 +476,28 @@
       <option name="project" value="LOCAL" />
       <updated>1601367881627</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="typo">
+      <created>1601368212054</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1601368212054</updated>
+    </task>
+    <task id="LOCAL-00005" summary="typo">
+      <created>1601368266507</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1601368266507</updated>
+    </task>
+    <task id="LOCAL-00006" summary="#2 createDeploymentVersion&#10;new version 1.9.10">
+      <created>1601638642416</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1601638642416</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -469,49 +505,51 @@
     <MESSAGE value="set comment" />
     <MESSAGE value="cleanup idea warnings" />
     <MESSAGE value="logging ..." />
-    <option name="LAST_COMMIT_MESSAGE" value="logging ..." />
+    <MESSAGE value="typo" />
+    <MESSAGE value="#2 createDeploymentVersion&#10;new version 1.9.10" />
+    <option name="LAST_COMMIT_MESSAGE" value="#2 createDeploymentVersion&#10;new version 1.9.10" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="225" y="101" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1601367483596">
+    <state x="209" y="98" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1601880584976">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="225" y="101" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1601367483596" />
+    <state x="209" y="98" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1601880584976" />
     <state x="473" y="225" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1600076822595">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="473" y="225" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1600076822595" />
-    <state x="486" y="182" width="570" height="419" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1600322702376">
+    <state x="486" y="182" width="570" height="419" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1601878753697">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="486" y="182" width="570" height="419" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1536.824@0.0.1536.824" timestamp="1600322702376" />
-    <state x="452" y="15" key="CommitChangelistDialog2" timestamp="1601368210097">
+    <state x="486" y="182" width="570" height="419" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1536.824@0.0.1536.824" timestamp="1601878753697" />
+    <state x="452" y="15" key="CommitChangelistDialog2" timestamp="1601638639683">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="452" y="15" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1601368210097" />
+    <state x="452" y="15" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1601638639683" />
     <state x="175" y="69" key="DiffContextDialog" timestamp="1601368091526">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="175" y="69" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1601368091526" />
-    <state width="1493" height="201" key="GridCell.Tab.0.bottom" timestamp="1601367489966">
+    <state width="1493" height="201" key="GridCell.Tab.0.bottom" timestamp="1601880668627">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="201" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1601367489966" />
-    <state width="1493" height="201" key="GridCell.Tab.0.center" timestamp="1601367489966">
+    <state width="1493" height="201" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1601880668627" />
+    <state width="1493" height="201" key="GridCell.Tab.0.center" timestamp="1601880668626">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="201" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1601367489966" />
-    <state width="1493" height="201" key="GridCell.Tab.0.left" timestamp="1601367489966">
+    <state width="1493" height="201" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1601880668626" />
+    <state width="1493" height="201" key="GridCell.Tab.0.left" timestamp="1601880668626">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="201" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1601367489966" />
-    <state width="1493" height="201" key="GridCell.Tab.0.right" timestamp="1601367489966">
+    <state width="1493" height="201" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1601880668626" />
+    <state width="1493" height="201" key="GridCell.Tab.0.right" timestamp="1601880668627">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="201" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1601367489966" />
-    <state x="361" y="148" key="Vcs.Push.Dialog.v2" timestamp="1601367944623">
+    <state width="1493" height="201" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1601880668627" />
+    <state x="361" y="148" key="Vcs.Push.Dialog.v2" timestamp="1601638671457">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="148" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1601367944623" />
+    <state x="361" y="148" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1601638671457" />
     <state x="465" y="220" key="com.intellij.ide.util.TipDialog" timestamp="1599568305230">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
