@@ -5,6 +5,7 @@ import atlassian_jira.AtlassianJiraIssue
 import org.apache.log4j.Logger
 import java.io.File
 import java.io.FileInputStream
+import kotlin.system.exitProcess
 
 /**
  * Methode zum Erzeugen einer zu deployenden Bamboo-Version
@@ -38,7 +39,11 @@ fun main (args : Array<String>) {
     // connect
     val b = AtlassianBambooInfo(bambooURL , jiraCredentials)
     // create Version
-    b.createReleaseVersion(projectId,planResultKey,deploymentVersion)
+    if (b.createReleaseVersion(projectId,planResultKey,deploymentVersion)){
+        exitProcess(0)
+    } else {
+        exitProcess(1)
+    }
 
     // https://bambooweb.mobilcom.de/rest/api/latest/result/  "206799092"  ABRMS-VER-1204  bm-version_999998
 

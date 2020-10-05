@@ -159,7 +159,7 @@ class AtlassianBambooInfo(val bambooURL : String, val credentials : String) {
      *
      * @since 1.0
      */
-    fun createReleaseVersion(project : String , planResultKey : String , version : String) {
+    fun createReleaseVersion(project : String , planResultKey : String , version : String): Boolean {
         // Authentifikation
         val auth = String(Base64.encode(credentials))
         // Client einrichten
@@ -174,7 +174,8 @@ class AtlassianBambooInfo(val bambooURL : String, val credentials : String) {
         } catch(e : Exception) {
             logger.info("Fehler beim Anlegen der Version ...")
             logger.info(e.printStackTrace())
+            return false
         }
-
+        return true
     }
 }
