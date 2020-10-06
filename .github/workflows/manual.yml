@@ -36,16 +36,16 @@ jobs:
     # Execute script
     - name: Execute pwd
       run: pwd
+        
+    # chmod script
+    - name: permission
+      run: chmod +x ./scripts/
     
     # Execute script
     - name: Execute script
       run: ls -ali
-    
-    # chmod script
-    - name: permission
-      run: chmod +x ./scripts/
-      
+        
     # Execute script
     - name: Execute script
-      run: ./AtlassianDeveloperTools/AtlassianDeveloperTools/scripts/hallo.sh
+      run: ./scripts/hallo.sh
     
