@@ -24,12 +24,13 @@ jobs:
     runs-on: ubuntu-latest
 
     # Steps represent a sequence of tasks that will be executed as part of the job
+    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     # Runs a single command using the runners shell
     - name: Send greeting
       run: echo "Hello ${{ github.event.inputs.name }}"
     
-    -name: Execute script
-     run: scripts/hallo.sh"
-     
-       
+    # Execute script
+    - name: Execute script
+      run: scripts/hallo.sh
+    
