@@ -32,5 +32,13 @@ jobs:
     
     # Execute script
     - name: Execute script
+      run: pwd
+    
+    # Execute script
+    - name: Execute script
+      run: ls -ali
+    
+    # Execute script
+    - name: Execute script
       run: scripts/hallo.sh
     
