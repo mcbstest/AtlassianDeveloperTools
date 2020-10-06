@@ -39,7 +39,11 @@ jobs:
         
     # chmod script
     - name: permission
-      run: chmod +x ./scripts/
+      run: chmod 777 ./scripts/*
+    
+    # cd scripts
+    - name: change directory
+      run: cd scripts
     
     # Execute script
     - name: Execute script
