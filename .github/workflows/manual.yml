@@ -47,5 +47,5 @@ jobs:
       
     # Execute script
     - name: Execute script
-      run: AtlassianDeveloperTools/AtlassianDeveloperToolsscripts/hallo.sh
+      run: ./AtlassianDeveloperTools/AtlassianDeveloperTools/scripts/hallo.sh
     
