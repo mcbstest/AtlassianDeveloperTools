@@ -30,8 +30,11 @@ jobs:
     - name: Send greeting
       run: echo "Hello ${{ github.event.inputs.name }}"
     
+    - name: Checkout
+      uses: actions/checkout@v1
+      
     # Execute script
-    - name: Execute script
+    - name: Execute pwd
       run: pwd
     
     # Execute script
