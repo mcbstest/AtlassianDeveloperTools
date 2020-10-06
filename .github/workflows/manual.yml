@@ -41,6 +41,10 @@ jobs:
     - name: Execute script
       run: ls -ali
     
+    # chmod script
+    - name: permission
+      run: chmod +x ./scripts/
+      
     # Execute script
     - name: Execute script
       run: scripts/hallo.sh
