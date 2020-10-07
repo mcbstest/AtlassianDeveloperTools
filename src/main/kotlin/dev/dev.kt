@@ -263,8 +263,8 @@ fun main(args : Array<String>) {
 
     //j.getReferencedIssue("ABCD-1234")
 
-    j.addComment("SPOC-421275", "Deployment auf 'GIT'")
-
+    j.addComment("SPOC-421275", "Deployment auf 'Prod'")
+      j.getTransitions("ABRMS-2707")
 
    //j.getIssueId("ABRMS-2363")
 

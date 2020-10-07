@@ -404,7 +404,7 @@ class AtlassianJiraIssue(val jiraURL : String , val credentials : String) {
     /**
      * Abfrage der möglichen Statusübergänge an einem JIRA-Issue
      */
-    /*fun getTransitions(issue : String) {
+    fun getTransitions(issue : String) {
         logger.info("getTransitions")
         // Athentifizierung
         val auth = String(Base64.encode(credentials))
@@ -416,7 +416,7 @@ class AtlassianJiraIssue(val jiraURL : String , val credentials : String) {
         // Result
         logger.info("Transitions : $response")
     }
-    */
+
 
 
     /**
