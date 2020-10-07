@@ -263,7 +263,7 @@ fun main(args : Array<String>) {
 
     //j.getReferencedIssue("ABCD-1234")
 
-    //j.addComment("IAT-15510", "Releasebuild : ms-customerproduct-mcbs_2.0.11 \\n Diese Lösung ist testbereit nach dem Deployment dieser Version auf der für den Test vorgesehenen Plattform (TEST / GIT)")
+    j.addComment("SPOC-421275", "Deployment auf 'GIT'")
 
 
    //j.getIssueId("ABRMS-2363")
@@ -272,7 +272,7 @@ fun main(args : Array<String>) {
     //val componentList = j.getComponentsForIssue("ABC-3007.xml")
 
 
-    val b = AtlassianBambooInfo("https://bambooweb.mobilcom.de/rest/api/latest/result/", "mcbstest:qs_mcbs_11")
-    b.createReleaseVersion("206799092","ABRMS-VER-1204","bm-version_999998")
+    //val b = AtlassianBambooInfo("https://bambooweb.mobilcom.de/rest/api/latest/result/", "mcbstest:qs_mcbs_11")
+    //b.createReleaseVersion("206799092","ABRMS-VER-1204","bm-version_999998")
 
 }

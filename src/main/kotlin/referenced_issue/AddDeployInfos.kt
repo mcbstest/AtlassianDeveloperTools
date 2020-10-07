@@ -107,7 +107,7 @@ fun main(args : Array<String>) {
     s.forEach {
 
         logger.debug("Setzen des Build-Kommentars an $it...")
-        //j.addComment(it, "Releasebuild : $version :: Deployment auf $stage")
+        j.addComment(it, "Releasebuild : $version :: Deployment auf $stage")
 
     }
 
