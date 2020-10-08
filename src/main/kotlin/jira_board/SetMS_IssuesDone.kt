@@ -52,7 +52,8 @@ fun main(args : Array<String>) {
     for(x in issueList){
         logger.info("Issue : $x")
         val cl = j.getComponentsForIssue(x)
-        if (cl.size == 1) {
+
+        if ((cl.size == 1) || ((cl.size == 2) && (cl.contains("ms-configuration"))) ) {
             val state = j.getIssueState(x)
             if (state == "Entwicklung abgeschlossen") {
                 j.setIssueState(x, "741")

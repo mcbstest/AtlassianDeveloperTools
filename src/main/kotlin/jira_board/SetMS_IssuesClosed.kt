@@ -8,6 +8,7 @@ import org.apache.log4j.Logger
  * - two transitions :
  *   741 : test
  *   821 : done
+ *   811 : close
  *
  * Issues , die sich zum Zeitpunkt der Bearbeitung nicht in "Entwicklung abgeschlossen" befinden, werden nicht modifiziert.
  * Sofern mehr als 1 betroffene Komponente eingetragen ist, wird der Status nicht verändert.
@@ -52,7 +53,7 @@ fun main(args : Array<String>) {
     for(x in issueList){
         logger.info("Issue : $x")
         val cl = j.getComponentsForIssue(x)
-        if (cl.size == 1) {
+        if ((cl.size == 1) || ((cl.size == 2) && (cl.contains("ms-configuration"))) ) {
             val state = j.getIssueState(x)
             if (state == "Entwicklung abgeschlossen") {
                 j.setIssueState(x, "741")
