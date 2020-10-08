@@ -517,12 +517,17 @@ class TestRail (testrailURL : String, testrailUser : String, testrailPasswd : St
         data["testrun_id"] = testrunId
         // check !
         logger.debug(data)
-        // Request
-        testrun = testrailClient.sendPost("close_run/${testrunId}", data) as JSONObject
-        // Kontrollausgaben
-        logger.debug(testrun)
-        logger.info(testrun["id"])
-        return testrun["id"].toString()
+        try {
+            // Request
+            testrun = testrailClient.sendPost("close_run/${testrunId}", data) as JSONObject
+            // Kontrollausgaben
+            logger.debug(testrun)
+            logger.info(testrun["id"])
+            return testrun["id"].toString()
+        } catch(e : Exception){
+            logger.info(e.printStackTrace())
+            return "-1"
+        }
 
     }
 }

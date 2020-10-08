@@ -53,6 +53,6 @@ fun main(args : Array<String>) {
     // Testruns auslesen
     val testrunId = t.getTestrunByName(projectId,testrun)
     // Update
-    t.closeTestRun(testrunId)
-
+    val s = t.closeTestRun(testrunId)
+    logger.info("Close : $s")
 }

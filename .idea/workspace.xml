@@ -8,10 +8,8 @@
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/dev/dev.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/dev/dev.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/jira_board/SetMS_IssuesClosed.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/jira_board/SetMS_IssuesClosed.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/jira_board/SetMS_IssuesDone.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/jira_board/SetMS_IssuesDone.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/gurock_testrail/TestRail.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/gurock_testrail/TestRail.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/testrail/TestRailCloseRun.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/testrail/TestRailCloseRun.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +99,7 @@
       <command value="gradle clean build fatJar dokka" />
     </option>
   </component>
-  <component name="RunManager" selected="Kotlin.setMS_IssuesClosed">
+  <component name="RunManager" selected="Kotlin.CloseTestRun">
     <configuration name="AtlassianDeveloperTools [clean build fatJar dokka]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -206,10 +204,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CoseTestRun" type="JetRunConfigurationType">
+    <configuration name="CloseTestRun" type="JetRunConfigurationType">
       <module name="AtlassianDeveloperTools.main" />
       <option name="VM_PARAMETERS" value="-Dlog4j.configuration=file:C:\bm\AtlassianDeveloperTools\log4j_debug.properties" />
-      <option name="PROGRAM_PARAMETERS" value="https://testrail.mobilcom.de &quot;bernd.moeller@md.de:qs_mcbs_11&quot; &quot;MCBS-Core&quot; &quot;2020-06-29_ms-oidc_1.9.1&quot;" />
+      <option name="PROGRAM_PARAMETERS" value="https://testrail.mobilcom.de &quot;bernd.moeller@md.de:qs_mcbs_11&quot; &quot;MCBS-Core&quot; &quot;ms-delegate_1.4.0&quot;" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PASS_PARENT_ENVS" value="true" />
@@ -450,7 +448,7 @@
       <item itemvalue="Kotlin.AddMilestone" />
       <item itemvalue="Kotlin.AddSprints" />
       <item itemvalue="Kotlin.AddMetaIssue" />
-      <item itemvalue="Kotlin.CoseTestRun" />
+      <item itemvalue="Kotlin.CloseTestRun" />
       <item itemvalue="Kotlin.AddDeployInfos" />
       <item itemvalue="Kotlin.CheckDependency" />
       <item itemvalue="Kotlin.setMS_IssuesClosed" />
@@ -563,7 +561,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602067178018</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="#3 : supplementary condition">
+      <created>1602141481355</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1602141481355</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -578,13 +583,14 @@
     <MESSAGE value="script-test" />
     <MESSAGE value="reactivated Deployment-Infos / Message" />
     <MESSAGE value="close issues" />
-    <option name="LAST_COMMIT_MESSAGE" value="close issues" />
+    <MESSAGE value="#3 : supplementary condition" />
+    <option name="LAST_COMMIT_MESSAGE" value="#3 : supplementary condition" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="175" y="98" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1602139349622">
+    <state x="175" y="98" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1602161524061">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="175" y="98" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1602139349622" />
+    <state x="175" y="98" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1602161524061" />
     <state x="473" y="225" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1600076822595">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -593,34 +599,34 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="486" y="182" width="570" height="419" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1536.824@0.0.1536.824" timestamp="1602066921988" />
-    <state x="452" y="15" key="CommitChangelistDialog2" timestamp="1602067175551">
+    <state x="452" y="15" key="CommitChangelistDialog2" timestamp="1602141478503">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="452" y="15" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1602067175551" />
+    <state x="452" y="15" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1602141478503" />
     <state x="175" y="69" key="DiffContextDialog" timestamp="1601368091526">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="175" y="69" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1601368091526" />
-    <state width="1493" height="201" key="GridCell.Tab.0.bottom" timestamp="1602139358044">
+    <state width="1493" height="201" key="GridCell.Tab.0.bottom" timestamp="1602161826666">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="201" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1602139358044" />
-    <state width="1493" height="201" key="GridCell.Tab.0.center" timestamp="1602139358043">
+    <state width="1493" height="201" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1602161826666" />
+    <state width="1493" height="201" key="GridCell.Tab.0.center" timestamp="1602161826666">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="201" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1602139358043" />
-    <state width="1493" height="201" key="GridCell.Tab.0.left" timestamp="1602139358042">
+    <state width="1493" height="201" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1602161826666" />
+    <state width="1493" height="201" key="GridCell.Tab.0.left" timestamp="1602161826665">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="201" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1602139358042" />
-    <state width="1493" height="201" key="GridCell.Tab.0.right" timestamp="1602139358043">
+    <state width="1493" height="201" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1602161826665" />
+    <state width="1493" height="201" key="GridCell.Tab.0.right" timestamp="1602161826666">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="201" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1602139358043" />
-    <state x="361" y="148" key="Vcs.Push.Dialog.v2" timestamp="1602067199397">
+    <state width="1493" height="201" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1602161826666" />
+    <state x="361" y="148" key="Vcs.Push.Dialog.v2" timestamp="1602141494776">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="148" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1602067199397" />
+    <state x="361" y="148" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1602141494776" />
     <state x="465" y="220" key="com.intellij.ide.util.TipDialog" timestamp="1599568305230">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
