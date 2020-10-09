@@ -6,6 +6,7 @@ import org.json.simple.JSONObject
 import java.text.SimpleDateFormat
 import java.util.*
 
+
 /**
  * Klasse zur TestRail-Kommunikation
  * - Auslesen der Projekte
@@ -67,7 +68,8 @@ class TestRail (testrailURL : String, testrailUser : String, testrailPasswd : St
         val data: HashMap<String, Any> = HashMap<String, Any>()
         data["name"] = "${number}-IBN! ${name}"
         data["description"] = "Dev: ${dev} \nGIT: ${git}"
-        val sdf = SimpleDateFormat("dd.MM.yyyy").parse(ibn)
+        val sdf = SimpleDateFormat("dd.MM.yyyy z").parse("$ibn GMT" )
+
         val unixTime: Long = sdf.getTime() / 1000L
         data["due_on"] = "${unixTime}"
         // check !
@@ -78,7 +80,6 @@ class TestRail (testrailURL : String, testrailUser : String, testrailPasswd : St
         logger.debug(milestone)
 
     }
-
 
 
     /**
