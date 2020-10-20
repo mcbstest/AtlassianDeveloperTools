@@ -1,17 +1,15 @@
 package general_info
 
+//import com.sun.jersey.core.util.Base64
 import com.sun.jersey.api.client.Client
 import com.sun.jersey.api.client.ClientResponse
-//import com.sun.jersey.core.util.Base64
-import java.util.Base64
-import freemarker.core.TemplateConfiguration
 import freemarker.template.Configuration
 import freemarker.template.TemplateExceptionHandler
 import org.apache.log4j.Logger
 import org.json.simple.JSONArray
 import org.json.simple.JSONObject
 import org.json.simple.parser.JSONParser
-import java.io.StringWriter
+import java.io.*
 import java.net.URI
 import java.net.http.HttpClient
 import java.net.http.HttpRequest
@@ -126,6 +124,60 @@ class GeneralInfo {
             println(e.toString())
         }
      }
+
+    /**
+     * Methode zur Aktualisierung der Proxy-Liste (Version : Datum)
+     *
+     * @author Bernd Möller
+     */
+    fun writeProxy(proxy: String , version: String , date: String , filename: String){
+        logger.info("writeProxyVersion (${proxy} , ${version}) ...")
+
+        var updated = false
+        try {
+            val originalFile = File(filename)
+            val br = BufferedReader(FileReader(originalFile))
+
+            // Construct the new file that will later be renamed to the original
+            // filename.
+            val tempFile = File("tempfile.txt")
+            val pw = PrintWriter(FileWriter(tempFile))
+            var line: String? = null
+            // Read from the original file and write to the new
+            // unless content matches data to be removed.
+            while (br.readLine().also({ line = it }) != null) {
+
+                // System.out.println(line);
+                if (line!!.contains(proxy)) {
+                    line = "$proxy : $version : $date"
+                    updated = true
+                }
+                pw.println(line)
+                pw.flush()
+            }
+            pw.close()
+            br.close()
+
+            // Delete the original file
+            if (!originalFile.delete()) {
+                println("Could not delete file")
+                return
+            }
+
+            // Rename the new file to the filename the original file had.
+            if (!tempFile.renameTo(originalFile)) println("Could not rename file")
+        } catch (e: java.lang.Exception) {
+            println("Dateifehler !")
+            println(e.toString())
+        }
+        if (updated) {
+            println("Updated !")
+        } else {
+            println("Not Updated !")
+        }
+    }
+
+
 
     /**
      * Methode zur Ermittlung der Proxy- und Microservice-Versionen
