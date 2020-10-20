@@ -25,7 +25,7 @@ import java.util.*
  * @version 1.9.13
  * @see AtlassianJiraIssue
  */
-fun Main (args: Array<String>) {
+fun main (args: Array<String>) {
 
     // logging
     val logger = Logger.getLogger(AtlassianJiraIssue::class.java.name)
