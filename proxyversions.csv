@@ -1,0 +1,53 @@
+Proxy : Version : Datum
+nginx-md-oidc-proxy : 1.9.6 : 27.08.2020
+nginx-md-user-proxy : 1.0.33 : 13.08.2020
+nginx-md-cuba-proxy : 1.0.11 : 13.08.2020
+nginx-md-customer-proxy : 1.0.12 : 08.09.2020
+nginx-md-custchange-proxy : 1.0.4 : 14.08.2020
+nginx-md-customerproduct-proxy : 1.1.1 : 14.08.2020
+nginx-md-invoice-proxy : 1.0.4 : 17.08.2020
+md-billingaccount-proxy : 1.0.9 : 12.08.2020
+md-authorities-information-proxy : 1.0.1 : 30.10.2018
+nginx-md-commondata : 1.0.2 : 22.07.2020
+md-contentprovider-proxy : 0.1.8 : 18.06.2018
+nginx-md-abrms-health-proxy : 1.0.7 : 11.08.2020
+nginx-md-zap-mark-service-proxy : 1.0.6 : 17.08.2020
+nginx-md-zap-party-service-proxy : 1.1.2 : 17.08.2020
+nginx-md-zap-contract-service-proxy : 1.2.3 : 17.08.2020
+nginx-md-businesstransaction-proxy : 1.0.3 : 12.08.2020
+nginx-md-rating-proxy : 1.0.2 : 28.02.2020
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
