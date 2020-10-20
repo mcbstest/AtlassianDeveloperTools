@@ -14,7 +14,7 @@ import java.util.*
  * File has to by uploaded by Bamboo
  *
  * call :
- * java -Dlog4j.configuration=./log4j_debug.properties  -cp AtlassianDeveloperTools-all-x.y.z.jar:.:./AtlassianDeveloperTools  meta_issue.GetIBNDateKt "https://jira.freenet-group.de/rest/api/2/" "mcbstest:qs_mcbs_11" "META-206"
+ * java -Dlog4j.configuration=./log4j_debug.properties  -cp AtlassianDeveloperTools-all-x.y.z.jar:.:./AtlassianDeveloperTools  proxy_version.UpdateProxyListKtKt "Proxy-Name" "1.0.0" "Filename"
  *
  * @param [proxy] der Name des Proxy
  * @param [version] the version of the proxy
