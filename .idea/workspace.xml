@@ -1,26 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d88d6d90-cba0-456e-8fae-9a1f11102f32" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/proxy_version/updateProxyList.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.2/fileChanges/last-build.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.2/fileContent/fileContent.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.2/fileHashes/fileHashes.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.2/fileHashes/fileHashes.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.2/fileHashes/resourceHashesCache.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.2/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.2/taskHistory/taskHistory.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.2/taskHistory/taskHistory.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jiraResources/sprints.csv" beforeDir="false" afterPath="$PROJECT_DIR$/jiraResources/sprints.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/general_info/GeneralInfo.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/general_info/GeneralInfo.kt" afterDir="false" />
-    </list>
+    <list default="true" id="d88d6d90-cba0-456e-8fae-9a1f11102f32" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -110,7 +91,7 @@
       <command value="gradle clean build fatJar dokka" />
     </option>
   </component>
-  <component name="RunManager" selected="Kotlin.getCoverage">
+  <component name="RunManager" selected="Kotlin.proxy_version.updateProxyListKt">
     <configuration name="AtlassianDeveloperTools [clean build fatJar dokka]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -414,8 +395,8 @@
       <module name="AtlassianDeveloperTools.main" />
       <option name="VM_PARAMETERS" value="-Dlog4j.configuration=file:C:\bm\AtlassianDeveloperTools\log4j_debug.properties" />
       <option name="PROGRAM_PARAMETERS" value="fritz 0.0.1 proxyversions.csv" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" value="C:/Program Files/Zulu/zulu-11" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <option name="MAIN_CLASS_NAME" value="proxy_version.updateProxyListKt" />
       <option name="WORKING_DIRECTORY" value="" />
@@ -614,7 +595,21 @@
       <option name="project" value="LOCAL" />
       <updated>1602239062451</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="update proxy list">
+      <created>1603194281376</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1603194281376</updated>
+    </task>
+    <task id="LOCAL-00017" summary="add proxy list">
+      <created>1603194315547</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1603194315547</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -633,25 +628,27 @@
     <MESSAGE value="#4 : implemented exception-handling" />
     <MESSAGE value="new version : 1.9.12" />
     <MESSAGE value="testrail :: due-date with GMT" />
-    <option name="LAST_COMMIT_MESSAGE" value="testrail :: due-date with GMT" />
+    <MESSAGE value="update proxy list" />
+    <MESSAGE value="add proxy list" />
+    <option name="LAST_COMMIT_MESSAGE" value="add proxy list" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="175" y="98" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1603194216616">
+    <state x="175" y="98" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1603194455927">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="175" y="98" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1603194216616" />
+    <state x="175" y="98" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1603194455927" />
     <state x="473" y="225" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1600076822595">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="473" y="225" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1600076822595" />
-    <state x="486" y="182" width="570" height="419" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1603194167134">
+    <state x="486" y="182" width="570" height="419" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1603194445192">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="486" y="182" width="570" height="419" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1536.824@0.0.1536.824" timestamp="1603194167134" />
-    <state x="452" y="15" key="CommitChangelistDialog2" timestamp="1603194279619">
+    <state x="486" y="182" width="570" height="419" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1536.824@0.0.1536.824" timestamp="1603194445192" />
+    <state x="452" y="15" key="CommitChangelistDialog2" timestamp="1603194314296">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="452" y="15" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1603194279619" />
+    <state x="452" y="15" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1603194314296" />
     <state x="175" y="69" key="DiffContextDialog" timestamp="1601368091526">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
