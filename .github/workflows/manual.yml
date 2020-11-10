@@ -29,10 +29,7 @@ jobs:
     # Runs a single command using the runners shell
     - name: Send greeting
       run: echo "Hello ${{ github.event.inputs.name }}"
-    
-    - name: Checkout
-      uses: actions/checkout@v1
-      
+        
     # Execute script
     - name: Execute pwd
       run: pwd
@@ -48,10 +45,6 @@ jobs:
     # Execute script
     - name: Execute script
       run: ls -ali
-        
-    # Execute script
-    - name: Execute script
-      run: ./scripts/hallo.sh
     
     # Touch file
     - name: Touch File
