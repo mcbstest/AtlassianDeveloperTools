@@ -34,14 +34,6 @@ jobs:
     - name: Execute pwd
       run: pwd
         
-    # chmod script
-    - name: permission
-      run: chmod 777 ./scripts/*
-    
-    # cd scripts
-    - name: change directory
-      run: cd scripts
-    
     # Execute script
     - name: Execute script
       run: ls -ali
