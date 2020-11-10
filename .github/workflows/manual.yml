@@ -35,10 +35,14 @@ jobs:
       run: pwd
         
     # Execute script
-    - name: Execute script
-      run: ls -ali
+    - name: List Directory
+      run: dir
     
     # Touch file
-    - name: Touch File
+    - name: Create File
       run: echo "Hallo" > hallo.txt
+      
+     # Execute script
+    - name: Execute script
+      run: dir
     
