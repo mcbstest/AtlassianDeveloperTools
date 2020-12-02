@@ -12,6 +12,7 @@ import java.io.File
 import java.io.FileInputStream
 import java.io.IOException
 import java.io.InputStream
+import java.net.URLEncoder
 import java.text.SimpleDateFormat
 import java.util.*
 import kotlin.collections.ArrayList
@@ -410,6 +411,8 @@ class AtlassianJiraIssue(val jiraURL : String , val credentials : String) {
         val auth = String(Base64.encode(credentials))
         val client = Client.create()
         // Connect
+        //val uri = jiraURL+"issue/"+issue+"/transitions"
+        //val webResource = client.resource(URLEncoder.encode(uri))
         val webResource = client.resource(jiraURL+"issue/"+issue+"/transitions")
         // Request
         val response = webResource.header("Authorization", "Basic $auth").type("application/json").accept("application/json").get(String::class.java)
@@ -1154,6 +1157,45 @@ class AtlassianJiraIssue(val jiraURL : String , val credentials : String) {
         val id = json["id"] as String
         logger.info("IssueId : $id")
         return id
+    }
+
+    /**
+     * Funktion zum Auslesen der IssueId <br></br>
+     *
+     * @param [issue] Das Ticket
+     * @return  Eine Zeichenkette mit der numerischen IssueId
+     * @author Bernd Moeller
+     * @version 1.0
+     * @since 1.0
+     */
+    fun getIssueInfos(issue : String) : String {
+        logger.info("Get IssueInfos : $issue ")
+        // Authentifikation
+        val auth = String(Base64.encode(credentials))
+        // Client einrichten
+        val client = Client.create()
+        val webResource = client.resource("${jiraURL}issue/${issue}")
+        // Aufruf
+        val response = webResource.header("Authorization", "Basic $auth").type("application/json").accept("application/json").get(String::class.java)
+        logger.debug(response.toString())
+        // ResultString to JSON
+        val parser = JSONParser()
+        val json: JSONObject = parser.parse(response) as JSONObject
+        // fields / infos
+        val key = json["key"] as String
+        logger.info("Issue : $key")
+        // fields herausziehen
+        val f: JSONObject = json["fields"] as JSONObject
+        // issue_type herausziehen
+        val summary = f["summary"]
+        logger.info("Summary : $summary")
+        val s : JSONObject = f["status"] as JSONObject
+        val status : String = s["name"].toString()
+        logger.info("Status : $status")
+        val semVer = f["customfield_53394"] as JSONObject
+        val semanticVersion = semVer["value"].toString()
+        logger.info("SemanticVersion : $semanticVersion")
+        return "AAA"
     }
 
     /**

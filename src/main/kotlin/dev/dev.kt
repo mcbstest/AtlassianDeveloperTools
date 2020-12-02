@@ -264,9 +264,9 @@ fun main(args : Array<String>) {
     //j.getReferencedIssue("ABCD-1234")
 
     //j.addComment("SPOC-421275", "Deployment auf 'Prod'")
-      j.getTransitions("META-223")
+      //j.getTransitions("META-223")
 
-   //j.getIssueId("ABRMS-2363")
+   j.getIssueInfos("ABRMS-2363")
 
     // get components
     //val componentList = j.getComponentsForIssue("ABC-3007.xml")

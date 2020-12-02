@@ -10,10 +10,11 @@
 <h1>main</h1>
 <a name="jira_board$main(kotlin.Array((kotlin.String)))"></a>
 <code><span class="keyword">fun </span><span class="identifier">main</span><span class="symbol">(</span><span class="identifier" id="jira_board$main(kotlin.Array((kotlin.String)))/args">args</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html"><span class="identifier">Array</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
-<p>Method to modify the state of a list of issues from "finished" via "test" to "done"</p>
+<p>Method to modify the state of a list of issues from "done" to "closed"</p>
 <ul><li>two transitions :
 741 : test
-821 : done</li>
+821 : done
+811 : close</li>
 </ul>
 <p>Issues , die sich zum Zeitpunkt der Bearbeitung nicht in "Entwicklung abgeschlossen" befinden, werden nicht modifiziert.
 Sofern mehr als 1 betroffene Komponente eingetragen ist, wird der Status nicht verändert.</p>
