@@ -21,7 +21,7 @@ jobs:
   # This workflow contains a single job called "greet"
   greet:
     # The type of runner that the job will run on
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted]
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     # Steps represent a sequence of tasks that will be executed as part of the job
@@ -29,27 +29,20 @@ jobs:
     # Runs a single command using the runners shell
     - name: Send greeting
       run: echo "Hello ${{ github.event.inputs.name }}"
-    
-    - name: Checkout
-      uses: actions/checkout@v1
-      
+        
     # Execute script
     - name: Execute pwd
       run: pwd
         
-    # chmod script
-    - name: permission
-      run: chmod 777 ./scripts/*
-    
-    # cd scripts
-    - name: change directory
-      run: cd scripts
-    
     # Execute script
+    - name: List Directory
+      run: dir
+    
+    # Touch file
+    - name: Create File
+      run: echo "Hallo" > hallo.txt
+      
+     # Execute script
     - name: Execute script
-      run: ls -ali
-        
-    # Execute script
-    - name: Execute script
-      run: ./scripts/hallo.sh
+      run: dir
     
