@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d88d6d90-cba0-456e-8fae-9a1f11102f32" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/bamboo_comment/createBambooComment.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/bamboo_comment/createBambooComment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/bamboo_comment/CreateBambooComment.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -658,7 +656,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608113155019</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="set Bamboo-Comment (i.e. Issuelist)">
+      <created>1608114866761</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1608114866761</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -698,10 +703,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="486" y="182" width="570" height="419" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1536.824@0.0.1536.824" timestamp="1603194583633" />
-    <state x="452" y="15" key="CommitChangelistDialog2" timestamp="1608113152741">
+    <state x="452" y="15" key="CommitChangelistDialog2" timestamp="1608114865566">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="452" y="15" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1608113152741" />
+    <state x="452" y="15" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1608114865566" />
     <state x="175" y="69" key="DiffContextDialog" timestamp="1601368091526">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -726,10 +731,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="279" y="58" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1606289027155" />
-    <state x="361" y="148" key="Vcs.Push.Dialog.v2" timestamp="1608113186235">
+    <state x="361" y="148" key="Vcs.Push.Dialog.v2" timestamp="1608129896012">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="148" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1608113186235" />
+    <state x="361" y="148" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1608129896012" />
     <state x="93" y="93" width="1350" height="638" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1602480844528">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -742,6 +747,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="464" y="216" key="git4idea.merge.GitPullDialog/0.0.1536.824@0.0.1536.824" timestamp="1601368026990" />
+    <state x="587" y="270" key="git4idea.ui.GitTagDialog" timestamp="1608130012173">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="587" y="270" key="git4idea.ui.GitTagDialog/0.0.1536.824@0.0.1536.824" timestamp="1608130012173" />
     <state x="209" y="39" key="new project wizard" timestamp="1604469168220">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
