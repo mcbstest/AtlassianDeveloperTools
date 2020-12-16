@@ -1168,7 +1168,7 @@ class AtlassianJiraIssue(val jiraURL : String , val credentials : String) {
      * @version 1.0
      * @since 1.0
      */
-    fun getIssueInfos(issue : String) : String {
+    fun getIssueInfos(issue : String) : ArrayList<String> {
         logger.info("Get IssueInfos : $issue ")
         // Authentifikation
         val auth = String(Base64.encode(credentials))
@@ -1186,16 +1186,90 @@ class AtlassianJiraIssue(val jiraURL : String , val credentials : String) {
         logger.info("Issue : $key")
         // fields herausziehen
         val f: JSONObject = json["fields"] as JSONObject
-        // issue_type herausziehen
-        val summary = f["summary"]
+        // Summary
+        val summary = f["summary"] as String
         logger.info("Summary : $summary")
+        // Status
         val s : JSONObject = f["status"] as JSONObject
         val status : String = s["name"].toString()
         logger.info("Status : $status")
-        val semVer = f["customfield_53394"] as JSONObject
-        val semanticVersion = semVer["value"].toString()
-        logger.info("SemanticVersion : $semanticVersion")
-        return "AAA"
+        // Komponenten
+        // Liste für Komponenten des Tickets
+        val compList = ArrayList<String>()
+        val components = f["components"] as JSONArray
+        for (comp in components) {
+            val jsonNumber = comp as JSONObject
+            val cn = jsonNumber["name"] as String
+            logger.debug("1 Component : $cn")
+            compList.add(cn)
+        }
+        logger.info("Liste : $compList")
+        // Semantic Version
+        var semanticVersion : String = " "
+        try {
+            val semVer = f["customfield_53394"] as JSONObject
+            semanticVersion = semVer["value"].toString()
+            logger.info("SemanticVersion : $semanticVersion")
+        } catch(ex: TypeCastException) {
+            // ex.printStackTrace()
+            logger.info("keine semanticVersion ...")
+            semanticVersion = "Patch"
+        }
+
+        // Liste für Labels des Tickets
+        val labels = f["labels"] as JSONArray
+        logger.info(labels)
+        // Priority
+        val prio = f["priority"] as JSONObject
+        val priority = prio["name"].toString()
+        logger.info("Priority : $priority")
+        // FixVersions
+        // Liste für fixVersions des Tickets
+        val fixversionList = ArrayList<String>()
+        val fixVersions = f["fixVersions"] as JSONArray
+        for (fv in fixVersions) {
+            val jsonNumber = fv as JSONObject
+            val f = jsonNumber["name"] as String
+            logger.debug("1 fixVersion : $f")
+            fixversionList.add(f)
+        }
+        logger.info("Liste : $fixversionList")
+        // Liste für fixVersions des Tickets
+        val versionList = ArrayList<String>()
+        val versions = f["versions"] as JSONArray
+        for (v in versions) {
+            val jsonNumber = v as JSONObject
+            val singleVersion = jsonNumber["name"] as String
+            logger.debug("1 Version : $singleVersion")
+            versionList.add(singleVersion)
+        }
+        logger.info("Liste : $versionList")
+        // Dependencies
+        var dependency : String = " "
+        try {
+            dependency = f["customfield_54490"] as String
+        } catch (ex: TypeCastException) {
+            // ex.printStackTrace()
+            logger.info("keine Dependency ...")
+            dependency = "keine"
+        }
+
+        logger.info("Dependency : $dependency")
+        // Ausgabe
+        logger.info("Issue : $key,$summary,$status,$compList,$semanticVersion,$labels,$priority,$fixversionList,$versionList,$dependency ")
+        // Rückgabe
+        val issueInfo = ArrayList<String>()
+        issueInfo.add(key)
+        issueInfo.add(summary)
+        issueInfo.add(status)
+        issueInfo.add(compList.toString())
+        issueInfo.add(semanticVersion)
+        issueInfo.add(labels.toString())
+        issueInfo.add(priority)
+        issueInfo.add(fixversionList.toString())
+        issueInfo.add(versionList.toString())
+        issueInfo.add(dependency)
+        return issueInfo
     }
 
     /**

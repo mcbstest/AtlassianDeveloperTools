@@ -14,6 +14,7 @@ import org.apache.log4j.Logger
 import org.json.simple.JSONArray
 import org.json.simple.JSONObject
 import org.json.simple.parser.JSONParser
+import java.io.File
 import java.net.URLEncoder.encode
 import java.util.*
 import kotlin.collections.ArrayList
@@ -266,13 +267,30 @@ fun main(args : Array<String>) {
     //j.addComment("SPOC-421275", "Deployment auf 'Prod'")
       //j.getTransitions("META-223")
 
-   j.getIssueInfos("ABRMS-2363")
+
+    /*val file = File("issueInfo.csv")
+    file.writeText("issue;summary;status,components;semanticVersion;keywords;priority;fixVersions;affectedVersions;dependency;\n")
+    var i = ArrayList<String>()
+    val issueList : List<String> = File("branch_issues.txt").readLines()
+    for (issue in issueList) {
+        logger.info(issue)
+        i = j.getIssueInfos(issue)
+        logger.info(i)
+        var infoString = ""
+        for (infoItem in i) {
+            logger.debug("InfoItem  : $infoItem")
+            infoString = infoString + infoItem + ";"
+        }
+        logger.info(infoString)
+        file.appendText("$infoString\n")
+    }
+*/
 
     // get components
     //val componentList = j.getComponentsForIssue("ABC-3007.xml")
 
 
-    //val b = AtlassianBambooInfo("https://bambooweb.mobilcom.de/rest/api/latest/result/", "mcbstest:qs_mcbs_11")
-    //b.createReleaseVersion("206799092","ABRMS-VER-1204","bm-version_999998")
+    val b = AtlassianBambooInfo("https://bambooweb.mobilcom.de/rest/api/latest/result/", "mcbstest:qs_mcbs_11")
+    b.createBuildComment("ABRMS-VER","1252","ABRMS-1234 ABRMS-3456 ABRMS-9876")
 
 }

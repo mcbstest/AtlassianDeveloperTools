@@ -1,6 +1,7 @@
 package atlassian_bamboo
 
 import com.sun.jersey.api.client.Client
+import com.sun.jersey.api.client.ClientResponse
 import com.sun.jersey.core.util.Base64
 import org.apache.log4j.Logger
 import org.json.simple.JSONArray
@@ -11,9 +12,9 @@ import java.io.PrintWriter
 
 
 /**
- * JIRA-API-Access
+ * Bamboo-API-Access
  *
- * Jira-Access via Atlassian-Jira-REST-API
+ * Bamboo-Access via Atlassian-Bamboo-REST-API
  *
  * @property bambooURL : die URL fuer produktiven Bamboo-Zugriff
  * @property credentials : login:password fuer produktiven Bamboo-Zugriff
@@ -177,5 +178,36 @@ class AtlassianBambooInfo(val bambooURL : String, val credentials : String) {
             return false
         }
         return true
+    }
+
+    /**
+     * Funktion zum Erzeugen eines Kommentars an einem Build
+     *
+     * @param [plankey] Der Bamboo-PlanKey (z.B. "MCBS-MR63") zu dem die Issues ausgelesen werden sollen
+     * @param [buildnumber] Die laufende Nummer des Bamboo-Builds zu dem die Issues ausgelesen werden sollen
+     * @param [comment] Der zu setzende Kommentar i.e. die issues als 1 Zeichenkette
+     *
+     * @author Bernd Moeller
+     *
+     * @since 1.10.2
+     */
+    fun createBuildComment(plankey : String , buildnumber : String , comment : String) {
+        logger.info("addBuildComment ...")
+        // Authentifikation
+        val auth = String(Base64.encode(credentials))
+        // Client einrichten
+        val client = Client.create()
+        // data
+        val data = "{\"content\": \"$comment\"}"
+        // URL setzen
+        try {
+            val webResource = client.resource("$bambooURL$plankey-$buildnumber/comment")
+            val response= webResource.header("Authorization", "Basic $auth").type("application/json").accept("application/json").post(ClientResponse::class.java, data)
+            logger.info("CreateBuildComment : ${response.status}")
+        } catch(e : Exception) {
+            logger.info("Fehler beim Erzeugen des Kommentars ...")
+            logger.info(e.printStackTrace())
+        }
+
     }
 }
