@@ -268,7 +268,7 @@ fun main(args : Array<String>) {
       //j.getTransitions("META-223")
 
 
-    /*val file = File("issueInfo.csv")
+    val file = File("issueInfo.csv")
     file.writeText("issue;summary;status,components;semanticVersion;keywords;priority;fixVersions;affectedVersions;dependency;\n")
     var i = ArrayList<String>()
     val issueList : List<String> = File("branch_issues.txt").readLines()
@@ -284,13 +284,13 @@ fun main(args : Array<String>) {
         logger.info(infoString)
         file.appendText("$infoString\n")
     }
-*/
+
 
     // get components
     //val componentList = j.getComponentsForIssue("ABC-3007.xml")
 
 
-    val b = AtlassianBambooInfo("https://bambooweb.mobilcom.de/rest/api/latest/result/", "mcbstest:qs_mcbs_11")
-    b.createBuildComment("ABRMS-VER","1252","ABRMS-1234 ABRMS-3456 ABRMS-9876")
+    //val b = AtlassianBambooInfo("https://bambooweb.mobilcom.de/rest/api/latest/result/", "mcbstest:qs_mcbs_11")
+    //b.createBuildComment("ABRMS-VER","1252","ABRMS-1234 ABRMS-3456 ABRMS-9876")
 
 }

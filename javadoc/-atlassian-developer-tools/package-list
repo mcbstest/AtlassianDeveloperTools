@@ -6,6 +6,7 @@ agile
 atlassian_bamboo
 atlassian_jira
 bamboo_artifacts
+bamboo_comment
 bamboo_version
 be_issue
 branch_info
