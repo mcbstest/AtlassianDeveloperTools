@@ -42,7 +42,7 @@ fun main(args : Array<String>) {
 
     val j = AtlassianJiraIssue(jiraURL, credentials)
 
-    val file = File("infofile")
+    val file = File("$infofile")
     file.writeText("issue;summary;status,components;semanticVersion;keywords;priority;fixVersions;affectedVersions;dependency;\n")
     var i = ArrayList<String>()
     val issueList : List<String> = File(issuefile).readLines()
@@ -50,13 +50,15 @@ fun main(args : Array<String>) {
         logger.info(issue)
         i = j.getIssueInfos(issue)
         logger.info(i)
-        var infoString = ""
-        for (infoItem in i) {
-            logger.debug("InfoItem  : $infoItem")
-            infoString = infoString + infoItem + ";"
+        if ( ! i.contains("No Issue")) {
+            var infoString = ""
+            for (infoItem in i) {
+                logger.debug("InfoItem  : $infoItem")
+                infoString = infoString + infoItem + ";"
+            }
+            logger.debug(infoString)
+            file.appendText("$infoString\n")
         }
-        logger.info(infoString)
-        file.appendText("$infoString\n")
     }
 
 }

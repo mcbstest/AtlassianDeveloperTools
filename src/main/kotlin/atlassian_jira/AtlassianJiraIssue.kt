@@ -1176,6 +1176,9 @@ class AtlassianJiraIssue(val jiraURL : String , val credentials : String) {
         val client = Client.create()
         val webResource = client.resource("${jiraURL}issue/${issue}")
         // Aufruf
+
+    try {
+
         val response = webResource.header("Authorization", "Basic $auth").type("application/json").accept("application/json").get(String::class.java)
         logger.debug(response.toString())
         // ResultString to JSON
@@ -1183,16 +1186,16 @@ class AtlassianJiraIssue(val jiraURL : String , val credentials : String) {
         val json: JSONObject = parser.parse(response) as JSONObject
         // fields / infos
         val key = json["key"] as String
-        logger.info("Issue : $key")
+        logger.debug("Issue : $key")
         // fields herausziehen
         val f: JSONObject = json["fields"] as JSONObject
         // Summary
         val summary = f["summary"] as String
-        logger.info("Summary : $summary")
+        logger.debug("Summary : $summary")
         // Status
-        val s : JSONObject = f["status"] as JSONObject
-        val status : String = s["name"].toString()
-        logger.info("Status : $status")
+        val s: JSONObject = f["status"] as JSONObject
+        val status: String = s["name"].toString()
+        logger.debug("Status : $status")
         // Komponenten
         // Liste für Komponenten des Tickets
         val compList = ArrayList<String>()
@@ -1203,26 +1206,26 @@ class AtlassianJiraIssue(val jiraURL : String , val credentials : String) {
             logger.debug("1 Component : $cn")
             compList.add(cn)
         }
-        logger.info("Liste : $compList")
+        logger.debug("Liste : $compList")
         // Semantic Version
-        var semanticVersion : String = " "
+        var semanticVersion: String = " "
         try {
             val semVer = f["customfield_53394"] as JSONObject
             semanticVersion = semVer["value"].toString()
-            logger.info("SemanticVersion : $semanticVersion")
-        } catch(ex: TypeCastException) {
+            logger.debug("SemanticVersion : $semanticVersion")
+        } catch (ex: TypeCastException) {
             // ex.printStackTrace()
-            logger.info("keine semanticVersion ...")
+            logger.debug("keine semanticVersion ...")
             semanticVersion = "Patch"
         }
 
         // Liste für Labels des Tickets
         val labels = f["labels"] as JSONArray
-        logger.info(labels)
+        logger.debug(labels)
         // Priority
         val prio = f["priority"] as JSONObject
         val priority = prio["name"].toString()
-        logger.info("Priority : $priority")
+        logger.debug("Priority : $priority")
         // FixVersions
         // Liste für fixVersions des Tickets
         val fixversionList = ArrayList<String>()
@@ -1233,7 +1236,7 @@ class AtlassianJiraIssue(val jiraURL : String , val credentials : String) {
             logger.debug("1 fixVersion : $f")
             fixversionList.add(f)
         }
-        logger.info("Liste : $fixversionList")
+        logger.debug("Liste : $fixversionList")
         // Liste für fixVersions des Tickets
         val versionList = ArrayList<String>()
         val versions = f["versions"] as JSONArray
@@ -1243,20 +1246,21 @@ class AtlassianJiraIssue(val jiraURL : String , val credentials : String) {
             logger.debug("1 Version : $singleVersion")
             versionList.add(singleVersion)
         }
-        logger.info("Liste : $versionList")
+        logger.debug("Liste : $versionList")
         // Dependencies
-        var dependency : String = " "
+        var dependency: String = " "
         try {
             dependency = f["customfield_54490"] as String
         } catch (ex: TypeCastException) {
             // ex.printStackTrace()
-            logger.info("keine Dependency ...")
+            logger.debug("keine Dependency ...")
             dependency = "keine"
         }
 
-        logger.info("Dependency : $dependency")
+        logger.debug("Dependency : $dependency")
+
         // Ausgabe
-        logger.info("Issue : $key,$summary,$status,$compList,$semanticVersion,$labels,$priority,$fixversionList,$versionList,$dependency ")
+        logger.debug("Issue : $key,$summary,$status,$compList,$semanticVersion,$labels,$priority,$fixversionList,$versionList,$dependency ")
         // Rückgabe
         val issueInfo = ArrayList<String>()
         issueInfo.add(key)
@@ -1270,6 +1274,13 @@ class AtlassianJiraIssue(val jiraURL : String , val credentials : String) {
         issueInfo.add(versionList.toString())
         issueInfo.add(dependency)
         return issueInfo
+
+    } catch (e: Exception) {
+        val nixInfo = ArrayList<String>()
+        nixInfo.add("No Issue")
+        return nixInfo
+    }
+
     }
 
     /**
