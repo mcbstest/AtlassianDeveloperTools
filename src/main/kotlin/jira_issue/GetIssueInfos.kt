@@ -47,9 +47,9 @@ fun main(args : Array<String>) {
     var i = ArrayList<String>()
     val issueList : List<String> = File(issuefile).readLines()
     for (issue in issueList) {
-        logger.info(issue)
+        logger.debug(issue)
         i = j.getIssueInfos(issue)
-        logger.info(i)
+        logger.debug(i)
         if ( ! i.contains("No Issue")) {
             var infoString = ""
             for (infoItem in i) {

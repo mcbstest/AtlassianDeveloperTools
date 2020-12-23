@@ -1169,7 +1169,7 @@ class AtlassianJiraIssue(val jiraURL : String , val credentials : String) {
      * @since 1.0
      */
     fun getIssueInfos(issue : String) : ArrayList<String> {
-        logger.info("Get IssueInfos : $issue ")
+        logger.debug("Get IssueInfos : $issue ")
         // Authentifikation
         val auth = String(Base64.encode(credentials))
         // Client einrichten
