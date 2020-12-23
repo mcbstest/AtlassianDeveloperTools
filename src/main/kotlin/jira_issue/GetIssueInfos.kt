@@ -7,8 +7,11 @@ import java.io.File
 import java.util.*
 
 /**
- * Methode zum Auslesen der relevanten Infos der Issues aus einer File-Liste
- * - die Liste wird ausgelesen
+ * Methode zum Auslesen der relevanten Infos der Issues aus einer Datei (z.B. nach einerm Branch-Scan)
+ * Zurückgegeben wird eine Datei mit folgendem Inhalt (quasi Releasenotes) :
+ * issue;summary;status,components;semanticVersion;keywords;priority;fixVersions;affectedVersions;dependency
+ *
+ * - die Liste/Datei wird ausgelesen
  * - die relevanten Infos werden in JIRA gesammelt
  * - die Infos werden in eine neue Datei geschrieben
  *
