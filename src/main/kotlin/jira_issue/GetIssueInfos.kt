@@ -7,9 +7,9 @@ import java.io.File
 import java.util.*
 
 /**
- * Methode zum Auslesen der relevanten Infos der Issues aus einer Datei (z.B. nach einerm Branch-Scan)
- * Zurückgegeben wird eine Datei mit folgendem Inhalt (quasi Releasenotes) :
- * issue;summary;status,components;semanticVersion;keywords;priority;fixVersions;affectedVersions;dependency
+ * Methode zum Auslesen der relevanten Infos der Issues aus einer Datei (z.B. nach einerm Branch-Scan) <br>
+ * Zurückgegeben wird eine Datei mit folgendem Inhalt (quasi Releasenotes) : <br>
+ * issue;summary;status,components;semanticVersion;keywords;priority;fixVersions;affectedVersions;dependency <br>
  *
  * - die Liste/Datei wird ausgelesen
  * - die relevanten Infos werden in JIRA gesammelt
@@ -46,7 +46,7 @@ fun main(args : Array<String>) {
     val j = AtlassianJiraIssue(jiraURL, credentials)
 
     val file = File("$infofile")
-    file.writeText("issue;summary;status,components;semanticVersion;keywords;priority;fixVersions;affectedVersions;dependency;\n")
+    file.writeText("issue;summary;status;components;semanticVersion;keywords;priority;fixVersions;affectedVersions;dependency;\n")
     var i = ArrayList<String>()
     val issueList : List<String> = File(issuefile).readLines()
     for (issue in issueList) {

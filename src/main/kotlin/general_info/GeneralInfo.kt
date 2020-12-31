@@ -332,9 +332,21 @@ class GeneralInfo {
         logger.info("Create new '${semVer}' based on $version")
 
         val x = version.split(".")
-        var patch : Int = x[3].toInt()
-        var minor : Int = x[2].toInt()
-        var major : Int = x[1].toInt()
+        logger.info("Versionselemente : ${x.size}")
+
+        var patch: Int = 0
+        var minor: Int = 0
+        var major: Int = 0
+        if (x.size == 4) {
+            patch = x[3].toInt()
+            minor = x[2].toInt()
+            major = x[1].toInt()
+        } else {
+            patch = x[2].toInt()
+            minor = x[1].toInt()
+            major = x[0].toInt()
+        }
+
         // val comp : String = x[0]
         when (semVer) {
             "Patch" -> patch += 1
