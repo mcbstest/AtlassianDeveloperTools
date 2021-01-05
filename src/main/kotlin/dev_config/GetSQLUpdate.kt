@@ -31,7 +31,7 @@ fun main(args : Array<String>) {
     val issueFile : String
 
     var properties = Properties()
-    var config: Boolean = false
+    var sql: Boolean = false
     // logging
     val logger = Logger.getLogger(AtlassianJiraIssue::class.java.getName())
     // parameter
@@ -55,27 +55,27 @@ fun main(args : Array<String>) {
         for (comp in complist) {
 
             // Auswertung
-            if (complist.contains("ms-configuration")) {
+            if (complist.contains("SQL Update Script")) {
                 //logger.info("${e} : Config ...")
-                config = true
-                properties.put("config", "true")
+                sql = true
+                properties.put("sql", "true")
             } else {
-                logger.debug("$it : Keine Config ...")
+                logger.debug("$it : Kein SQL ...")
             }
         }
     }
 
     // Schreiben
-    logger.info("Config : ${config}")
+    logger.info("SQL : ${sql}")
     // Property-File
-    var propertiesFile = "config.properties"
+    var propertiesFile = "sql.properties"
     val fileWriter = FileWriter(propertiesFile)
-    if (config == true) {
-        properties.put("config", "true")
+    if (sql == true) {
+        properties.put("sql", "true")
     } else {
-        properties.put("config", "false")
+        properties.put("sql", "false")
     }
-    properties.store(fileWriter, "Config ...")
+    properties.store(fileWriter, "SQL ...")
 }
 
 

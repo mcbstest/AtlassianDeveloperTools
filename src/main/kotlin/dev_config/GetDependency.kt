@@ -50,10 +50,10 @@ fun main(args : Array<String>) {
         logger.debug("$it :: $depString")
 
         if (depString == "null") {
-
+            logger.debug("No dependency !")
         } else {
             logger.info("$it : ${depString}\n")
-            dependencystring += " !! $it : ${depString}  "
+            dependencystring += " !! $it : $depString  "
             dependency = true
             properties["dependency"] = "true"
             dependencyIssueList.add(it)
