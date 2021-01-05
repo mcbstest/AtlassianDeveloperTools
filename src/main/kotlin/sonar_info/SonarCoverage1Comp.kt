@@ -9,7 +9,9 @@ import org.json.simple.JSONArray
 import org.json.simple.JSONObject
 import org.json.simple.parser.JSONParser
 import java.io.File
+import java.io.FileWriter
 import java.io.InputStream
+import java.util.*
 import kotlin.math.roundToInt
 
 /**
@@ -46,7 +48,8 @@ fun main(args : Array<String>) {
     logger.info("Sonar : ${sonarURL}")
     sonarComp = args[1]
     logger.info("Komponente : ${sonarComp}")
-    
+
+    var properties = Properties()
     logger.info("Sonar ... ")
     // sonar / general_info
     val g = GeneralInfo()
@@ -69,8 +72,15 @@ fun main(args : Array<String>) {
 
                 val coverage : Float =  g.getSonarCoverage(sonarURL,sonarCompA,sonarCompP,metrickey).toFloat()
                 val i : Int = coverage.roundToInt()
-                logger.info("Coverage : ${i}")
-                file.appendText("coverage=${i}")
+                logger.info("Coverage : $i")
+                // file.appendText("coverage=${i}")
+                // Schreiben
+
+                // Property-File
+                var propertiesFile = "coverage.properties"
+                val fileWriter = FileWriter(propertiesFile)
+                properties.put("coverage", "$i")
+                properties.store(fileWriter, "Coverage ...")
             }
         }
     }
