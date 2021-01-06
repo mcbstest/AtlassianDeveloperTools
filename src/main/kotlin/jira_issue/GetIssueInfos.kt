@@ -46,7 +46,7 @@ fun main(args : Array<String>) {
     val j = AtlassianJiraIssue(jiraURL, credentials)
 
     val file = File("$infofile")
-    file.writeText("issue;summary;status;components;semanticVersion;keywords;priority;fixVersions;affectedVersions;dependency;\n")
+    // file.writeText("issue;summary;status;components;semanticVersion;keywords;priority;fixVersions;affectedVersions;dependency;\n")
     var i = ArrayList<String>()
     val issueList : List<String> = File(issuefile).readLines()
     for (issue in issueList) {
