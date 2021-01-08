@@ -16,7 +16,7 @@ import java.util.*
  *
  * @param [jiraURL] die URL fuer produktiven JIRA-Zugriff
  * @param [credentials] login:password fuer produktiven JIRA-Zugriff
- * @param [issueFile] property-File mit den zu berücksichtigenden Komponenten
+ * @param [issueFile] File mit den zu berücksichtigenden Komponenten
  * @author bmoeller
  *
  * @see AtlassianJiraIssue
@@ -78,7 +78,7 @@ fun main(args : Array<String>) {
         //p.put("dependendIssueList", dependencyIssueList.toString())
         p["dependendIssueList"] = "\"${dependencystring}\""
     } else {
-        p["dependendIssueList"] = "[ ]"
+        p["dependendIssueList"] = ""
     }
 
     p.store(issueListWriter, "Dependend issues ...")

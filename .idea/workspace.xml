@@ -2,8 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="69d156e7-7bc2-424e-9218-ff261dcbd8df" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/jira_issue/SetFixVersions.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/branch_issues.txt" beforeDir="false" afterPath="$PROJECT_DIR$/branch_issues.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/dev_config/GetDependency.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/dev_config/GetDependency.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,15 +35,16 @@
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/kotlin/dev_config" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/kotlin/jira_issue" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\bm\AtlassianDeveloperTools\src\main\kotlin\jira_issue" />
       <recent name="C:\bm\AtlassianDeveloperTools\src\main\kotlin\dev_config" />
       <recent name="C:\bm\AtlassianDeveloperTools\src\main\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Kotlin.GetCoverage1">
+  <component name="RunManager" selected="Kotlin.SetFixVersions">
     <configuration name="CreateNewMCBSComponentVersion" type="JetRunConfigurationType">
       <log_file alias="x" path="$PROJECT_DIR$/log4j_debug.properties" />
       <module name="AtlassianDeveloperTools.main" />
@@ -133,9 +142,24 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SetFixVersions" type="JetRunConfigurationType">
+      <log_file alias="x" path="$PROJECT_DIR$/log4j_debug.properties" />
+      <module name="AtlassianDeveloperTools.main" />
+      <option name="VM_PARAMETERS" value="-Dlog4j.configuration=./log4j_debug.properties" />
+      <option name="PROGRAM_PARAMETERS" value="https://jira.freenet-group.de/rest/api/2/ mcbstest:qs_mcbs_11 ms-customer_7.3.3 ABRMS-MSCMR branch_issues.txt " />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" value="11" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" value="jira_issue.SetFixVersionsKt" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Kotlin.GetIssueInfo" />
       <item itemvalue="Kotlin.CreateNewVersion" />
+      <item itemvalue="Kotlin.SetFixVersions" />
       <item itemvalue="Kotlin.CreateNewMCBSComponentVersion" />
       <item itemvalue="Kotlin.GetDependencies" />
       <item itemvalue="Kotlin.GetConfig" />
@@ -210,7 +234,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609931034877</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="issue_infos without headline">
+      <created>1609932000267</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1609932000267</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -223,58 +254,58 @@
     <option name="LAST_COMMIT_MESSAGE" value="issue_infos without headline" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="239" y="138" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1609855519866">
+    <state x="261" y="141" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1610030696544">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="239" y="138" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1609855519866" />
-    <state x="498" y="202" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1609840758937">
+    <state x="261" y="141" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1610030696544" />
+    <state x="498" y="202" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1610030066873">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="498" y="202" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1536.824@0.0.1536.824" timestamp="1609840758937" />
-    <state x="389" y="11" key="CommitChangelistDialog2" timestamp="1609931033704">
+    <state x="498" y="202" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1536.824@0.0.1536.824" timestamp="1610030066873" />
+    <state x="389" y="11" key="CommitChangelistDialog2" timestamp="1609931998673">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="389" y="11" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1609931033704" />
+    <state x="389" y="11" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1609931998673" />
     <state x="550" y="169" key="FileChooserDialogImpl" timestamp="1609138322280">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="550" y="169" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1609138322280" />
-    <state width="1493" height="240" key="GridCell.Tab.0.bottom" timestamp="1609856163330">
+    <state width="1493" height="240" key="GridCell.Tab.0.bottom" timestamp="1610030925661">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="240" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1609856163330" />
-    <state width="1493" height="240" key="GridCell.Tab.0.center" timestamp="1609856163330">
+    <state width="1493" height="240" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1610030925661" />
+    <state width="1493" height="240" key="GridCell.Tab.0.center" timestamp="1610030925661">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="240" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1609856163330" />
-    <state width="1493" height="240" key="GridCell.Tab.0.left" timestamp="1609856163329">
+    <state width="1493" height="240" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1610030925661" />
+    <state width="1493" height="240" key="GridCell.Tab.0.left" timestamp="1610030925661">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="240" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1609856163329" />
-    <state width="1493" height="240" key="GridCell.Tab.0.right" timestamp="1609856163330">
+    <state width="1493" height="240" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1610030925661" />
+    <state width="1493" height="240" key="GridCell.Tab.0.right" timestamp="1610030925661">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="240" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1609856163330" />
-    <state width="1493" height="240" key="GridCell.Tab.1.bottom" timestamp="1609856163330">
+    <state width="1493" height="240" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1610030925661" />
+    <state width="1493" height="240" key="GridCell.Tab.1.bottom" timestamp="1610030925662">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="240" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1609856163330" />
-    <state width="1493" height="240" key="GridCell.Tab.1.center" timestamp="1609856163330">
+    <state width="1493" height="240" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1610030925662" />
+    <state width="1493" height="240" key="GridCell.Tab.1.center" timestamp="1610030925662">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="240" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1609856163330" />
-    <state width="1493" height="240" key="GridCell.Tab.1.left" timestamp="1609856163330">
+    <state width="1493" height="240" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1610030925662" />
+    <state width="1493" height="240" key="GridCell.Tab.1.left" timestamp="1610030925662">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="240" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1609856163330" />
-    <state width="1493" height="240" key="GridCell.Tab.1.right" timestamp="1609856163330">
+    <state width="1493" height="240" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1610030925662" />
+    <state width="1493" height="240" key="GridCell.Tab.1.right" timestamp="1610030925662">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="240" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1609856163330" />
-    <state x="361" y="148" key="Vcs.Push.Dialog.v2" timestamp="1609931047201">
+    <state width="1493" height="240" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1610030925662" />
+    <state x="361" y="148" key="Vcs.Push.Dialog.v2" timestamp="1609932035435">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="148" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1609931047201" />
+    <state x="361" y="148" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1609932035435" />
     <state x="580" y="331" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1609839022283">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
