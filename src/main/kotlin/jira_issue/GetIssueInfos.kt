@@ -38,8 +38,9 @@ fun main(args : Array<String>) {
     logger.info("JiraURL : $jiraURL")
     val credentials : String = args[1]
     logger.info("Credentials : $credentials")
-    val issues : String = args[2]
+    var issues : String = args[2]
     logger.info("Issues : $issues")
+    issues=issues.trim()
     val infofile : String = args[3]
     logger.info("Info-File : $infofile")
 

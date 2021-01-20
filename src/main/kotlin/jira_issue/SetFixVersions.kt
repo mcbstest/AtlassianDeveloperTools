@@ -41,8 +41,9 @@ fun main(args : Array<String>) {
     logger.info("Version : $version")
     val componentFile : String = args[3]
     logger.info("Components : $componentFile")
-    val issues : String = args[4]
+    var issues : String = args[4]
     logger.info("Issues : $issues")
+    issues=issues.trim()
 
     val j = AtlassianJiraIssue(jiraURL, credentials)
     // Properties / Komponentenliste des Projekts auslesen

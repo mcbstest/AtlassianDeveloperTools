@@ -28,7 +28,7 @@ fun main(args : Array<String>) {
     // properties
     val jiraURL : String
     val credentials : String
-    val issues : String
+    var issues : String
 
     var properties = Properties()
     var config: Boolean = false
@@ -42,6 +42,7 @@ fun main(args : Array<String>) {
     logger.info("Credentials : $credentials")
     issues = args[2]
     logger.info("Issues : $issues")
+    issues=issues.trim()
     // Connections to Atlassian
     val j = AtlassianJiraIssue(jiraURL, credentials)
 
