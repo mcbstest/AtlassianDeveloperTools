@@ -16,7 +16,7 @@ import java.util.*
  *
  * @param [jiraURL] die URL fuer produktiven JIRA-Zugriff
  * @param [credentials] login:password fuer produktiven JIRA-Zugriff
- * @param [issueFile] File mit den zu berücksichtigenden Komponenten
+ * @param [issues] Zeichenkette mit den zu berücksichtigenden Issues
  * @author bmoeller
  *
  * @see AtlassianJiraIssue
@@ -34,18 +34,18 @@ fun main(args : Array<String>) {
     logger.info("JiraURL : $jiraURL")
     val credentials : String = args[1]
     logger.info("Credentials : $credentials")
-    val issueFile : String = args[2]
-    logger.info("File : $issueFile")
+    val issues : String = args[2]
+    logger.info("Issues : $issues")
 
     val dependencyIssueList : ArrayList<String> = ArrayList<String>()
     var depString : String
     var dependencystring = ""
     // Connections to Atlassian
     val j = AtlassianJiraIssue(jiraURL, credentials)
+    // Iteration über die Liste
+    val issueList: List<String> = issues.split(" ").map { it.trim() }
 
-    val issues : List<String> = File(issueFile).readLines()
-
-    issues.forEach {
+    issueList.forEach {
         depString = j.getDependencyForIssue(it)
         logger.debug("$it :: $depString")
 

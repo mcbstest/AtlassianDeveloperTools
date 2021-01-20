@@ -20,7 +20,7 @@ import java.util.*
  * @param [credentials] login:password fuer produktiven JIRA-Zugriff
  * @param [version] die zu setzende Versionsnummer
  * @param [componentFile] Property-File mit relevanten Komponenten (erwartet in jiraResources)
- * @param [issueFile] File mit den zu berücksichtigenden Komponenten
+ * @param [issues] Zeichenkette (sep.) mit zu berücksichtigenden Issues
   *
  * @author bmoeller
  *
@@ -41,8 +41,8 @@ fun main(args : Array<String>) {
     logger.info("Version : $version")
     val componentFile : String = args[3]
     logger.info("Components : $componentFile")
-    val issueFile : String = args[4]
-    logger.info("File : $issueFile")
+    val issues : String = args[4]
+    logger.info("Issues : $issues")
 
     val j = AtlassianJiraIssue(jiraURL, credentials)
     // Properties / Komponentenliste des Projekts auslesen
@@ -50,9 +50,9 @@ fun main(args : Array<String>) {
     val projectComponents = p.getProperty("components")
     val compArray = projectComponents.split(",".toRegex()).dropLastWhile { it.isEmpty() }.toTypedArray()
     var complist : ArrayList<String>
-    // Iteration über die Datei
-    val issues : List<String> = File(issueFile).readLines()
-    issues.forEach {
+    // Iteration über die Liste
+    val issueList: List<String> = issues.split(" ").map { it.trim() }
+    issueList.forEach {
         println("$it :: SetFixVersion !")
         complist = j.getComponentsForIssue(it)
         logger.debug("CompList : $complist")

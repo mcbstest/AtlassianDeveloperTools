@@ -20,7 +20,7 @@ import java.util.*
  *
  * @param [jiraURL] die URL fuer produktiven JIRA-Zugriff
  * @param [credentials] login:password fuer produktiven JIRA-Zugriff
- * @param [issueFile] File mit auszuwertenden Issues
+ * @param [issueList] Zeichenkette mit auszuwertenden Issues (Delimiter " ")
  * @param [infoFile] File mit allen Infos
  *
  * @author bmoeller
@@ -38,17 +38,17 @@ fun main(args : Array<String>) {
     logger.info("JiraURL : $jiraURL")
     val credentials : String = args[1]
     logger.info("Credentials : $credentials")
-    val issuefile : String = args[2]
-    logger.info("Issue-File : $issuefile")
+    val issues : String = args[2]
+    logger.info("Issues : $issues")
     val infofile : String = args[3]
     logger.info("Info-File : $infofile")
 
     val j = AtlassianJiraIssue(jiraURL, credentials)
 
-    val file = File("$infofile")
-    // file.writeText("issue;summary;status;components;semanticVersion;keywords;priority;fixVersions;affectedVersions;dependency;\n")
-    var i = ArrayList<String>()
-    val issueList : List<String> = File(issuefile).readLines()
+    val file = File(infofile)
+    var i: ArrayList<String>
+    //Keine Datei , besser String !  val issueList : List<String> = File(issuefile).readLines()
+    val issueList: List<String> = issues.split(" ").map { it.trim() }
     for (issue in issueList) {
         logger.debug(issue)
         i = j.getIssueInfos(issue)
@@ -57,11 +57,12 @@ fun main(args : Array<String>) {
             var infoString = ""
             for (infoItem in i) {
                 logger.debug("InfoItem  : $infoItem")
-                infoString = infoString + infoItem + ";"
+                infoString = "$infoString$infoItem;"
             }
+            infoString = infoString.replace("[", "", false)
+            infoString = infoString.replace("]", "", false)
             logger.debug(infoString)
             file.appendText("$infoString\n")
         }
     }
-
 }

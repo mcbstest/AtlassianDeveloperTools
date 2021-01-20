@@ -1222,6 +1222,7 @@ class AtlassianJiraIssue(val jiraURL : String , val credentials : String) {
         // Liste für Labels des Tickets
         val labels = f["labels"] as JSONArray
         logger.debug(labels)
+
         // Priority
         val prio = f["priority"] as JSONObject
         val priority = prio["name"].toString()

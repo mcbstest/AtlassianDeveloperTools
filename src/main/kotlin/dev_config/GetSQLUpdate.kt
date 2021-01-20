@@ -28,7 +28,7 @@ fun main(args : Array<String>) {
     // properties
     val jiraURL : String
     val credentials : String
-    val issueFile : String
+    val issues : String
 
     var properties = Properties()
     var sql: Boolean = false
@@ -40,16 +40,16 @@ fun main(args : Array<String>) {
     logger.info("JiraURL : $jiraURL")
     credentials = args[1]
     logger.info("Credentials : $credentials")
-    issueFile = args[2]
-    logger.info("IssueFile : $issueFile")
+    issues = args[2]
+    logger.info("Issues : $issues")
     // Connections to Atlassian
     val j = AtlassianJiraIssue(jiraURL, credentials)
 
     var complist : ArrayList<String>
+    // Iteration über die Liste
+    val issueList: List<String> = issues.split(" ").map { it.trim() }
 
-    val issues : List<String> = File(issueFile).readLines()
-
-    issues.forEach {
+    issueList.forEach {
         complist = j.getComponentsForIssue("${it}")
         logger.debug("CompList : " + complist.toString())
         for (comp in complist) {
