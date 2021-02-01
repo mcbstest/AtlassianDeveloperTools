@@ -53,7 +53,7 @@ fun main(args : Array<String>) {
         logger.info("Issue : $x")
         val cl = j.getComponentsForIssue(x)
 
-        if ((cl.size == 1) || ((cl.size == 2) && (cl.contains("ms-configuration"))) ) {
+        if ((cl.size == 1) || ((cl.size == 2) && (cl.contains("ms-configuration"))) || ((cl.size == 2) && (cl.contains("SQL Update Script")))  ) {
             val state = j.getIssueState(x)
             if (state == "Entwicklung abgeschlossen") {
                 j.setIssueState(x, "741")

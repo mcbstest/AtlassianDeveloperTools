@@ -99,6 +99,40 @@ class AtlassianJiraIssue(val jiraURL : String , val credentials : String) {
     }
 
     /**
+     * Erzeugen eines neuen JIRA-Issue (TestOrder oder DB-Change-Order)
+     * @param [project] das JiraProjekt, in dem der Issue zu erzeugen ist (e.g. MCBS)
+     * @param [ordertype] der jira-order-type als text (e.g. Aufgabe , Service-Auftrag)
+     * @param [summary] die brief-description / headline (QS :: Version : Summary)
+     * @param [description] der eigentliche Inhalt des Issue
+     * @return die Systemantwort
+     */
+    fun createJiraIssue(project : String , ordertype : String , summary : String , description : String , ibn : String ) : String {
+        logger.info("createJiraIssue ...")
+        //
+        val desc = description
+        logger.debug("Desc : $desc")
+        // Data
+        val data = "{\"fields\":{\"project\":{\"key\":\"$project\"},\"issuetype\":{\"name\":\"$ordertype\"},\"description\":\"$desc\" ,\"summary\":\"$summary\"}}"
+        logger.info("Data : $data")
+        // Authentifizierung
+        val auth = String(Base64.encode(credentials))
+        val client = Client.create()
+        // Connect
+        val webResource = client.resource(jiraURL+"issue/")
+        // Request
+        val response = webResource.header("Authorization", "Basic $auth").type("application/json")
+                .accept("application/json").post(String::class.java, data)
+        logger.debug("Response : $response")
+        // Response auswerten
+        val parser = JSONParser()
+        val json = parser.parse(response) as JSONObject
+        return json["key"].toString()
+
+    }
+
+
+
+    /**
      * Erzeugen eines neuen JIRA-META-Issue (EPIC)
      * @param [mcbsrelease] die Nummer des MCBS-Release (e.g. 51)
      * @param [dev] der Beginn der Entwicklung
@@ -556,6 +590,7 @@ class AtlassianJiraIssue(val jiraURL : String , val credentials : String) {
             logger.info(e.stackTrace)
         }
     }
+
 
     /**
      * Setzen einer Releation zwischen META-Issue und Test-Order
