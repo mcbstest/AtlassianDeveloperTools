@@ -2,6 +2,7 @@ package sonar_info
 
 import general_info.GeneralInfo
 import org.apache.log4j.Logger
+import java.io.File
 import java.io.FileWriter
 import java.util.*
 import kotlin.math.roundToInt
@@ -46,6 +47,10 @@ fun main(args : Array<String>) {
     val i : Int = coverage.roundToInt()
     logger.info("Coverage : $i")
     // Schreiben
+    val file = File("coverage.properties")
+    file.createNewFile()
+    file.appendText("coverage=${i}")
+
     // Property-File
     val propertiesFile = "coverage.properties"
     val fileWriter = FileWriter(propertiesFile)
