@@ -130,6 +130,51 @@ class AtlassianJiraIssue(val jiraURL : String , val credentials : String) {
 
     }
 
+    /**
+     * Erzeugen eines neuen JIRA-Issue (beliebig)
+     * @param [project] das JiraProjekt, in dem der Issue zu erzeugen ist (e.g. MCBS)
+     * @param [ordertype] der jira-order-type als text (e.g. Aufgabe , Service-Auftrag)
+     * @param [summary] die brief-description / headline (QS :: Version : Summary)
+     * @param [description] der eigentliche Inhalt des Issue
+     * @param [components]
+     * @param [assignee]
+     * @param [env]
+     * @param [awt]]
+     * @return die Systemantwort
+     */
+    fun createJiraIssue2(project : String , ordertype : String , summary : String , description : String , components : String , assignee : String , env : String , awt : String) : String {
+        logger.info("createJiraIssue2 ...")
+        //
+        val desc = description
+        logger.debug("Desc : $desc")
+        val data : String
+        if ( (project == "SPOC") && (ordertype == "Fehler") ) {
+            // Data
+            data = "{\"fields\":{\"project\":{\"key\":\"${project}\"},\"issuetype\":{\"name\":\"Fehler\"},\"description\":\"$desc\" ,\"summary\":\"${summary}\",\"components\":[{\"name\":\"${components}\"}],\"assignee\":{\"name\":\"${assignee}\"},\"environment\":\"${env}\", \"customfield_13402\":\"${awt}\" }}"
+        } else if ((project == "SUPAPP") && (ordertype == "Aufgabe")) {
+            // Data
+            data = "{\"fields\":{\"project\":{\"key\":\"$project\"},\"issuetype\":{\"name\":\"$ordertype\"},\"description\":\"$desc\" ,\"summary\":\"$summary\"}}"
+        } else {
+            throw Exception("Fehlerhafte Issue-Konstellation !!")
+        }
+        logger.info("Data : $data")
+
+        // Authentifizierung
+        val auth = String(Base64.encode(credentials))
+        val client = Client.create()
+        // Connect
+        val webResource = client.resource(jiraURL+"issue/")
+        // Request
+        val response = webResource.header("Authorization", "Basic $auth").type("application/json")
+                .accept("application/json").post(String::class.java, data)
+        logger.debug("Response : $response")
+        // Response auswerten
+        val parser = JSONParser()
+        val json = parser.parse(response) as JSONObject
+        return json["key"].toString()
+
+    }
+
 
 
     /**

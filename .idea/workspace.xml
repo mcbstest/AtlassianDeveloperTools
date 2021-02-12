@@ -2,20 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="69d156e7-7bc2-424e-9218-ff261dcbd8df" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/jira_board/SetMS_IssueListDone.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/jira_issue/SetComments.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/sonar_info/getComponentsCoverage.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/-atlassian-developer-tools/jira_board/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/-atlassian-developer-tools/jira_board/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/-atlassian-developer-tools/jira_board/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/-atlassian-developer-tools/jira_board/main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage.properties" beforeDir="false" afterPath="$PROJECT_DIR$/coverage.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/-atlassian-developer-tools/atlassian_jira/-atlassian-jira-issue/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/-atlassian-developer-tools/atlassian_jira/-atlassian-jira-issue/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadoc/-atlassian-developer-tools/index-outline.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/-atlassian-developer-tools/index-outline.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/atlassian_jira/AtlassianJiraIssue.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/atlassian_jira/AtlassianJiraIssue.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/jira_board/SetMS_IssuesDone.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/jira_board/SetMS_IssuesDone.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,18 +32,26 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
+  <component name="ProjectId" id="1oN70Yflo6vQZmsZ8RIZDxihc8B" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/kotlin/jira_issue" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/kotlin/sonar_info" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\bm\AtlassianDeveloperTools\src\main\kotlin\sonar_info" />
       <recent name="C:\bm\AtlassianDeveloperTools\src\main\kotlin\jira_issue" />
       <recent name="C:\bm\AtlassianDeveloperTools\src\main\kotlin\jira_board" />
       <recent name="C:\bm\AtlassianDeveloperTools\src\main\kotlin\dev_config" />
       <recent name="C:\bm\AtlassianDeveloperTools\src\main\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Kotlin.SetComments">
+  <component name="RunManager" selected="Kotlin.GetComponentsCoverage">
     <configuration name="CreateNewMCBSComponentVersion" type="JetRunConfigurationType">
       <log_file alias="x" path="$PROJECT_DIR$/log4j_debug.properties" />
       <module name="AtlassianDeveloperTools.main" />
@@ -73,6 +75,20 @@
       <option name="ALTERNATIVE_JRE_PATH" value="11" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <option name="MAIN_CLASS_NAME" value="branch_info.CreateNewVersionKt" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GetComponentsCoverage" type="JetRunConfigurationType">
+      <log_file alias="x" path="$PROJECT_DIR$/log4j_debug.properties" />
+      <module name="AtlassianDeveloperTools.main" />
+      <option name="VM_PARAMETERS" value="-Dlog4j.configuration=./log4j_debug.properties" />
+      <option name="PROGRAM_PARAMETERS" value="https://sonar.mobilcom.de/api/measures/component de.md.mcbs.ms ms-oidc" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" value="11" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" value="sonar_info.GetComponentsCoverageKt" />
       <option name="WORKING_DIRECTORY" value="" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -208,6 +224,7 @@
       <item itemvalue="Kotlin.CreateNewVersion" />
       <item itemvalue="Kotlin.SetFixVersions" />
       <item itemvalue="Kotlin.SetComments" />
+      <item itemvalue="Kotlin.GetComponentsCoverage" />
       <item itemvalue="Kotlin.setIssueListDone" />
       <item itemvalue="Kotlin.getTestArtifacts" />
       <item itemvalue="Kotlin.CreateNewMCBSComponentVersion" />
@@ -312,7 +329,21 @@
       <option name="project" value="LOCAL" />
       <updated>1611149592525</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="SetComments">
+      <created>1612190848882</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1612190848882</updated>
+    </task>
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="69d156e7-7bc2-424e-9218-ff261dcbd8df" name="Default Changelist" comment="" />
+      <created>1613114974735</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1613114974735</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -329,14 +360,14 @@
     <option name="LAST_COMMIT_MESSAGE" value="SetComments" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="261" y="141" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1611847229213">
+    <state x="261" y="141" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1613125274573">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="261" y="141" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1611847229213" />
-    <state x="498" y="202" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1610030066873">
+    <state x="261" y="141" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1613125274573" />
+    <state x="498" y="202" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1613119715939">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="498" y="202" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1536.824@0.0.1536.824" timestamp="1610030066873" />
+    <state x="498" y="202" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1536.824@0.0.1536.824" timestamp="1613119715939" />
     <state x="389" y="11" key="CommitChangelistDialog2" timestamp="1612190845361">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -345,42 +376,46 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="550" y="169" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1609138322280" />
-    <state width="1493" height="186" key="GridCell.Tab.0.bottom" timestamp="1611847289493">
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1613120013870">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="186" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1611847289493" />
-    <state width="1493" height="186" key="GridCell.Tab.0.center" timestamp="1611847289492">
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1613120013870" />
+    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1613120013869">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="186" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1611847289492" />
-    <state width="1493" height="186" key="GridCell.Tab.0.left" timestamp="1611847289492">
+    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1613120013869" />
+    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1613120013869">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="186" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1611847289492" />
-    <state width="1493" height="186" key="GridCell.Tab.0.right" timestamp="1611847289492">
+    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1613120013868" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1613120013870">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="186" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1611847289492" />
-    <state width="1493" height="186" key="GridCell.Tab.1.bottom" timestamp="1611847289493">
+    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1613120013870" />
+    <state width="1493" height="210" key="GridCell.Tab.1.bottom" timestamp="1613120013870">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="186" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1611847289493" />
-    <state width="1493" height="186" key="GridCell.Tab.1.center" timestamp="1611847289493">
+    <state width="1493" height="210" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1613120013870" />
+    <state width="1493" height="210" key="GridCell.Tab.1.center" timestamp="1613120013870">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="186" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1611847289493" />
-    <state width="1493" height="186" key="GridCell.Tab.1.left" timestamp="1611847289493">
+    <state width="1493" height="210" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1613120013870" />
+    <state width="1493" height="210" key="GridCell.Tab.1.left" timestamp="1613120013870">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="186" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1611847289493" />
-    <state width="1493" height="186" key="GridCell.Tab.1.right" timestamp="1611847289493">
+    <state width="1493" height="210" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1613120013870" />
+    <state width="1493" height="210" key="GridCell.Tab.1.right" timestamp="1613120013870">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="186" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1611847289493" />
-    <state x="361" y="148" key="Vcs.Push.Dialog.v2" timestamp="1611149598811">
+    <state width="1493" height="210" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1613120013870" />
+    <state x="361" y="148" key="Vcs.Push.Dialog.v2" timestamp="1612190861133">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="148" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1611149598811" />
+    <state x="361" y="148" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1612190861133" />
+    <state x="477" y="240" key="com.intellij.ide.util.TipDialog" timestamp="1613115006585">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="477" y="240" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1613115006585" />
     <state x="580" y="331" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1609839022283">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
