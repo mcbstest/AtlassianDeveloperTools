@@ -17,6 +17,8 @@ jobs:
       uses: actions/setup-java@v1
       with:
         java-version: 11
+        fetch-depth: 0
+        
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
       
@@ -25,8 +27,37 @@ jobs:
       run: ./gradlew clean build fatJar dokka
 
     - name: Ausgabe
-      run: echo "Fertig !!"
-         
+      run: | 
+          ls -l
+          pwd
+    
+    # Version auslesen
+    - name: Read version
+      id: get_version
+      uses: christian-draeger/read-properties@1.0.1
+      with:
+        path: './gradle.properties'
+        property: 'VERSION'
+    
+    # Tag
+    - name: Tagging
+      uses: actions-ecosystem/action-push-tag@v1
+      with:
+          tag: '${{ steps.get_version.outputs.value }}'
+          message: 'tagging ...' 
+   
+    # Release erstellen (DRAFT bis zur Freigabe ?
+    - name: Create Release
+      id: create_release
+      uses: actions/create-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GH_REPO_MCBS }}
+      with:
+          tag_name: '${{ steps.get_version.outputs.value }}'
+          release_name: '${{ steps.get_version.outputs.value }}'
+          draft: false
+          prerelease: false
+          
     - name: Release
       uses: actions/upload-artifact@v1
       with:
