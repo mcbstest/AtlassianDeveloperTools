@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="69d156e7-7bc2-424e-9218-ff261dcbd8df" name="Default Changelist" comment="new version">
+    <list default="true" id="69d156e7-7bc2-424e-9218-ff261dcbd8df" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/-atlassian-developer-tools/atlassian_jira/-atlassian-jira-issue/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/-atlassian-developer-tools/atlassian_jira/-atlassian-jira-issue/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/-atlassian-developer-tools/index-outline.html" beforeDir="false" afterPath="$PROJECT_DIR$/javadoc/-atlassian-developer-tools/index-outline.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/sonar_info/getComponentsCoverage.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/sonar_info/getComponentsCoverage.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/atlassian_jira/AtlassianJiraIssue.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/atlassian_jira/AtlassianJiraIssue.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/sonar_issue/SonarIssue.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/sonar_issue/SonarIssue.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -355,7 +355,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613126566097</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="new property-file">
+      <created>1613134362778</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1613134362778</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -371,7 +378,8 @@
     <MESSAGE value="SetComments" />
     <MESSAGE value="fetchCoverage" />
     <MESSAGE value="new version" />
-    <option name="LAST_COMMIT_MESSAGE" value="new version" />
+    <MESSAGE value="new property-file" />
+    <option name="LAST_COMMIT_MESSAGE" value="new property-file" />
   </component>
   <component name="WindowStateProjectService">
     <state x="261" y="141" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1613125274573">
@@ -382,10 +390,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="498" y="202" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1536.824@0.0.1536.824" timestamp="1613119715939" />
-    <state x="389" y="11" key="CommitChangelistDialog2" timestamp="1613134319469">
+    <state x="389" y="11" key="CommitChangelistDialog2" timestamp="1613134360677">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="389" y="11" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1613134319469" />
+    <state x="389" y="11" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1613134360677" />
     <state x="550" y="169" key="FileChooserDialogImpl" timestamp="1609138322280">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -422,10 +430,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1493" height="210" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1613134275657" />
-    <state x="361" y="148" key="Vcs.Push.Dialog.v2" timestamp="1613126574590">
+    <state x="361" y="148" key="Vcs.Push.Dialog.v2" timestamp="1613134372185">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="148" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1613126574590" />
+    <state x="361" y="148" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1613134372185" />
     <state x="477" y="240" key="com.intellij.ide.util.TipDialog" timestamp="1613115006585">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

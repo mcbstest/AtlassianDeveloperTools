@@ -61,17 +61,17 @@ fun main(args : Array<String>) {
     logger.info("Assignee : ${assignee}")
     watchlist = args[5]
     val watchers  = watchlist.split(",")
-    logger.info("Watchers : ${watchers}")
+    logger.info("Watchers : $watchers")
     version = args[6]
-    logger.info("Version : ${version}")
+    logger.info("Version : $version")
     product = args[7]
-    logger.info("Produkt : ${product}")
+    logger.info("Produkt : $product")
     limit = args[8]
-    logger.info("Limit : ${limit}")
+    logger.info("Limit : $limit")
     coverage = args[9]
     logger.info("Coverage : ${coverage}")
     awt = args[10]
-    logger.info("Anf-Id : ${awt}")
+    logger.info("Anf-Id : $awt")
 
 
     val j = AtlassianJiraIssue(jiraURL, credentials)

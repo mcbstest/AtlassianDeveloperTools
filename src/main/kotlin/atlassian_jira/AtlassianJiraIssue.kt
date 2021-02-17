@@ -228,7 +228,7 @@ class AtlassianJiraIssue(val jiraURL : String , val credentials : String) {
         val desc = description + ibn
         logger.debug("Desc : $desc")
         // Data
-        val data = "{\"fields\":{\"project\":{\"key\":\"${project}\"},\"issuetype\":{\"name\":\"Fehler\"},\"description\":\"$desc\" ,\"summary\":\"${summary}\",\"components\":[{\"name\":\"${comp}\"}],\"assignee\":{\"name\":\"bmoeller\"},\"environment\":\"Bamboo / Sonar\", \"customfield_13402\":\"${awt}\" }}"
+        val data = "{\"fields\":{\"project\":{\"key\":\"${project}\"},\"issuetype\":{\"name\":\"Fehler\"},\"description\":\"$desc\" ,\"summary\":\"${summary}\",\"components\":[{\"name\":\"${comp}\"}],\"assignee\":{\"name\":\"bmoeller\"},\"environment\":\"Sonar\", \"customfield_13402\":\"${awt}\" }}"
 
         logger.info("Data : $data")
         // Authentifizierung
