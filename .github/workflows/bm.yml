@@ -1,8 +1,6 @@
 name: Build (bm)
 
 on:
-  push:
-    branches: [ master ]
   workflow_dispatch:
 
 jobs:
@@ -60,11 +58,11 @@ jobs:
     - name: Release
       uses: actions/upload-artifact@v1
       with:
-        name: AtlassianDeveloperTools
-        path: build/libs
+        name: AtlassianDeveloperTools-all-${{ steps.get_version.outputs.value }}.jar
+        path: ./build/libs/AtlassianDeveloperTools-all-${{ steps.get_version.outputs.value }}.jar
       
     - name: JavaDoc / Dokka
       uses: actions/upload-artifact@v1
       with:
         name: Java-Doc
-        path: javadoc
+        path: ./javadoc
