@@ -298,10 +298,16 @@ class GeneralInfo {
      * @since 1.1
      */
     fun createNewVersion(version: String , semVer : String) : String{
+        var patch : Int
         logger.info("Create new '${semVer}' based on $version")
 
         val x = version.split(".")
-        var patch : Int = x[2].toInt()
+        if (x[2].endsWith("-SNAPSHOT")) {
+            val p = x[2].split("-")
+            patch = p[0].toInt()
+        } else {
+            patch = x[2].toInt()
+        }
         var minor : Int = x[1].toInt()
         var major : Int = x[0].toInt()
         when (semVer) {
@@ -311,7 +317,11 @@ class GeneralInfo {
             "Major" -> {
                 major += 1; minor = 0 ; patch = 0 }
         }
-        return ("${major}.${minor}.${patch}")
+        if (version.endsWith("-SNAPSHOT")){
+            return ("${major}.${minor}.${patch}-SNAPSHOT")
+        } else {
+            return ("${major}.${minor}.${patch}")
+        }
     }
 
     /**
@@ -338,11 +348,21 @@ class GeneralInfo {
         var minor: Int = 0
         var major: Int = 0
         if (x.size == 4) {
-            patch = x[3].toInt()
+            if (x[3].endsWith("-SNAPSHOT")) {
+                val p = x[3].split("-")
+                patch = p[0].toInt()
+            } else {
+                patch = x[3].toInt()
+            }
             minor = x[2].toInt()
             major = x[1].toInt()
         } else {
-            patch = x[2].toInt()
+            if (x[2].endsWith("-SNAPSHOT")) {
+                val p = x[2].split("-")
+                patch = p[0].toInt()
+            } else {
+                patch = x[2].toInt()
+            }
             minor = x[1].toInt()
             major = x[0].toInt()
         }
@@ -355,7 +375,11 @@ class GeneralInfo {
             "Major" -> {
                 major += 1; minor = 0 ; patch = 0 }
         }
-        return ("${major}.${minor}.${patch}")
+        if (version.endsWith("-SNAPSHOT")){
+            return ("${major}.${minor}.${patch}-SNAPSHOT")
+        } else {
+            return ("${major}.${minor}.${patch}")
+        }
     }
 
     /**
