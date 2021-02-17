@@ -55,7 +55,7 @@ jobs:
           draft: false
           prerelease: false
           
-    - name: Release
+    - name: publish Release-Asset
       uses: actions/upload-artifact@v1
       with:
         name: AtlassianDeveloperTools-all-${{ steps.get_version.outputs.value }}.jar
