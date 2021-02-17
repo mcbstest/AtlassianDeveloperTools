@@ -20,7 +20,7 @@ jobs:
       
       
     - name: Build with Gradle
-      run: ./gradlew clean build fatJar dokka publish
+      run: ./gradlew clean build fatJar dokka
 
     - name: Ausgabe
       run: | 
