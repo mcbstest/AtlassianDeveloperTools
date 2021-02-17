@@ -15,7 +15,7 @@ buildscript {
 }
 
 group 'bm'
-version '1.16.0'
+version = project.VERSION
 
 
 apply plugin: 'java'
@@ -65,8 +65,8 @@ sourceSets {
 // java -cp build/libs/bm1-all-1.0-SNAPSHOT.jar p1.Bm1Kt
 task fatJar(type: Jar) {
     manifest {
-        attributes 'Implementation-Title': 'Gradle Jar File Example',
-                'Implementation-Version': version
+        attributes 'Implementation-Title': 'Gradle Jar File ',
+                'Implementation-Version': project.VERSION
     }
     baseName = project.name + '-all'
     from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
