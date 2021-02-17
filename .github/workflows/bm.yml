@@ -36,13 +36,7 @@ jobs:
         path: './gradle.properties'
         property: 'VERSION'
     
-    # Tag
-    - name: Tagging
-      uses: actions-ecosystem/action-push-tag@v1
-      with:
-          tag: '${{ steps.get_version.outputs.value }}'
-          message: 'tagging ...' 
-   
+       
     # Release erstellen (DRAFT bis zur Freigabe ?
     - name: Create Release
       id: create_release
@@ -61,8 +55,8 @@ jobs:
         name: AtlassianDeveloperTools-all-${{ steps.get_version.outputs.value }}.jar
         path: ./build/libs/AtlassianDeveloperTools-all-${{ steps.get_version.outputs.value }}.jar
       
-    - name: JavaDoc / Dokka
-      uses: actions/upload-artifact@v1
-      with:
-        name: Java-Doc
-        path: ./javadoc
+    # - name: JavaDoc / Dokka
+    #   uses: actions/upload-artifact@v1
+    #   with:
+    #     name: Java-Doc
+    #     path: ./javadoc
