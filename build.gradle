@@ -112,7 +112,7 @@ publishing {
             gpr(MavenPublication) {
                 artifactId = "aaa"
                 groupId = ""
-                artifact(jar)bm.de
+                artifact(jar)
             }
             
         }
