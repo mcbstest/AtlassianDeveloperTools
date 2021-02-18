@@ -111,7 +111,7 @@ publishing {
         }
         publications {
             gpr(MavenPublication) {
-                artifactId = "AtlassianDeveloperTools"
+                artifactId = "atlassiandevelopertools"
                 groupId = "de.mcbstest"
                 artifact(jar)
             }
