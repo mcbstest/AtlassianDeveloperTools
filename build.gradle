@@ -110,12 +110,13 @@ publishing {
             }
         }
         publications {
-            gpr(MavenPublication) {
-                artifactId = "atlassiandevelopertools"
-                groupId = "de.mcbstest"
-                artifact(jar)
+            mavenPublish(MavenPublication) {
+                groupId 'my.group.id'
+                artifactId 'my-artifact-id'
+                version = 1.16.0
             }
             
         }
+        
     }
 
