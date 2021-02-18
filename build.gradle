@@ -14,8 +14,6 @@ buildscript {
     }
 }
 
-group = project.ARTIFACT_GROUP_ID
-archivesBaseName = project.ARTIFACT_NAME
 version = project.VERSION
 
 
@@ -112,7 +110,7 @@ publishing {
         }
         publications {
             gpr(MavenPublication) {
-                artifactId = archivesBaseName
+                artifactId = "aaa"
 
                 artifact(Jar)
             }
