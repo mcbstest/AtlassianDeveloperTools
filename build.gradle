@@ -14,7 +14,8 @@ buildscript {
     }
 }
 
-group 'bm'
+group = project.ARTIFACT_GROUP_ID
+archivesBaseName = project.ARTIFACT_NAME
 version = project.VERSION
 
 
