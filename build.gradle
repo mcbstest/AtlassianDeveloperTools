@@ -104,7 +104,8 @@ publishing {
                 url = uri("https://maven.pkg.github.com/mcbstest/AtlassianDeveloperTools")
                 credentials {
                     username = "mcbstest"
-                    password = "0dac1f7fa2713fc06dc7171b5a75d33b110e6a01"
+                    // password = "0dac1f7fa2713fc06dc7171b5a75d33b110e6a01"
+                    password="ABCDE"
                 }
             }
         }
