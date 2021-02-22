@@ -317,11 +317,8 @@ class GeneralInfo {
             "Major" -> {
                 major += 1; minor = 0 ; patch = 0 }
         }
-        if (version.endsWith("-SNAPSHOT")){
-            return ("${major}.${minor}.${patch}-SNAPSHOT")
-        } else {
-            return ("${major}.${minor}.${patch}")
-        }
+        return ("${major}.${minor}.${patch}")
+
     }
 
     /**
@@ -375,11 +372,8 @@ class GeneralInfo {
             "Major" -> {
                 major += 1; minor = 0 ; patch = 0 }
         }
-        if (version.endsWith("-SNAPSHOT")){
-            return ("${major}.${minor}.${patch}-SNAPSHOT")
-        } else {
-            return ("${major}.${minor}.${patch}")
-        }
+        return ("${major}.${minor}.${patch}")
+
     }
 
     /**

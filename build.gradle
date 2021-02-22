@@ -92,6 +92,23 @@ task runTestOrder(type: JavaExec) {
     classpath = sourceSets.main.runtimeClasspath
 }
 
+task writeNewPom {
+    doLast {
+        pom {
+            project {
+                inceptionYear '2008'
+                licenses {
+                    license {
+                        name 'The Apache Software License, Version 2.0'
+                        url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                        distribution 'repo'
+                    }
+                }
+            }
+        }.writeTo("$buildDir/newpom.xml")
+    }
+}
+
 dokka {
     outputFormat = 'html'
     outputDirectory = "javadoc"
@@ -103,9 +120,9 @@ publishing {
                 name = "GitHubPackages"
                 url = uri("https://maven.pkg.github.com/mcbstest/AtlassianDeveloperTools")
                 credentials {
-                    username = "mcbstest"
-                    // password = "0dac1f7fa2713fc06dc7171b5a75d33b110e6a01"
-                    password="ABCDE"
+                    username = 'mcbstest'
+                    // password = 'token 0dac1f7fa2713fc06dc7171b5a75d33b110e6a01'
+                    password="qs_mcbs_11"
                 }
             }
         }
@@ -113,7 +130,8 @@ publishing {
             mavenPublish(MavenPublication) {
                 groupId 'my.group.id'
                 artifactId 'my-artifact-id'
-                version = 1.16.0
+                version "1.16.0"
+                from(components.java)
             }
             
         }
