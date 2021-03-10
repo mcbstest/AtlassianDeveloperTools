@@ -269,9 +269,9 @@ class AtlassianJiraIssue(val jiraURL : String , val credentials : String) {
 
 
     /**
-     * Zuweisung eines gegebenen JiraIssue
+     * Zuweisung eines gegebenen JiraIssue an einen User (= Login)
      * @param [issue] der JiraIssue (pattern : MCBS-1234)
-     * @param [assignee] der zuzuweisende Benutzer
+     * @param [assignee] der zuzuweisende Benutzer (i.e. sein Login)
      */
     fun setAssignee(issue : String , assignee : String) {
         logger.debug("setAssignee ...")
@@ -283,11 +283,13 @@ class AtlassianJiraIssue(val jiraURL : String , val credentials : String) {
         val client = Client.create()
         // Connect
         val webResource = client.resource(jiraURL+"issue/${issue}/assignee")
+        logger.debug("${jiraURL}issue/${issue}/assignee")
         // Request
         val response = webResource.header("Authorization", "Basic $auth").type("application/json").accept("application/json").put(ClientResponse::class.java, data)
         // State
         logger.debug("Status : ${response.status}")
     }
+
 
     /**
      * Hinzufuegen eines Beobachters zu einem gegebenen JiraIssue
