@@ -103,7 +103,7 @@ fun main(args : Array<String>) {
         }
         logger.debug("Setzen des Build-Kommentars an $it...")
         j.addComment(it, "Releasebuild : $component $version \\n Diese Lösung ist testbereit nach dem Deployment dieser Version auf der für den Test vorgesehenen Plattform (GIT / PET)")
-        j.setAssignee(it,"jiraittste ")
+        j.setAssignee(it,"jiraittste")
     }
 
 }

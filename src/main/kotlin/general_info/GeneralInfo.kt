@@ -78,7 +78,7 @@ class GeneralInfo {
             message.addHeader("format", "flowed");
             message.addHeader("Content-Transfer-Encoding", "8bit");
             // Absender
-            message.setFrom(InternetAddress("mcbstest@md.de"))
+            message.setFrom(InternetAddress("bernd.moeller@md.de"))
             // Adressatenliste
             message.setRecipients(Message.RecipientType.TO, InternetAddress.parse(mailaddress))
             //message.setRecipients(Message.RecipientType.CC, InternetAddress.parse(ccmailaddress))
