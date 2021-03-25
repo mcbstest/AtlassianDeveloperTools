@@ -64,7 +64,7 @@ fun main(args : Array<String>) {
     logger.info("Headline : $pre ${product}_${version} $post")
 
     // jiraquery = "https://jira.freenet-group.de/issues/?jql=project%20in%20(abrms%2C%20MCBS)%20AND%20Epos-Verkn%C3%BCpfung%3D${epic}%20AND%20fixVersion%20in%20(${version})"
-    jiraquery = "https://jira.freenet-group.de/issues/?jql=project%20in%20(abrms%2C%20MCBS)%20AND issue in LinkedIssues (\"${epic}\", \"ist abhängig von\")%20AND%20fixVersion%20in%20(${version})"
+    jiraquery = "https://jira.freenet-group.de/issues/?jql=project%20in%20(abrms%2C%20MCBS)%20AND issue in LinkedIssues (\"${epic}\", \"ist abh%C3%A4ngig von\")%20AND%20fixVersion%20in%20(${version})"
 
     val g = GeneralInfo()
     //g.sendMail(product, version, deployed, sql, config, mailaddress, templatefile, extra, "${pre} ${product}_${version} ${post}", jiraquery)
