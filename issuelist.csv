@@ -1,0 +1,3 @@
+ABRMS-2971;ms-usageprices - Update auf Spring Cloud 2020.0.x;Entwicklung abgeschlossen;ms-usageprices;Patch;;Wichtig (3-normal);ms-usageprices_1.0.7;;keine;
+ABRMS-2974; ms-agreement - Update auf Spring Cloud 2020.0.x;Entwicklung abgeschlossen;ms-agreement;Patch;;Wichtig (3-normal);;;keine;
+ABRMS-1633;test purpose only !;Entwicklung abgeschlossen;ms-configuration, ms-contentprovider;Patch;"dependency";Wichtig (3-normal);ms-contentprovider_99.99.99;;Aenderungen sind auch MCBS-Services-relevant !;

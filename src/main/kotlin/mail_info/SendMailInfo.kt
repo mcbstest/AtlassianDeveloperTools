@@ -69,7 +69,11 @@ fun main(args : Array<String>) {
     val g = GeneralInfo()
     //g.sendMail(product, version, deployed, sql, config, mailaddress, templatefile, extra, "${pre} ${product}_${version} ${post}", jiraquery)
     //g.sendMail("es-plugin-collection", "1.2", "false", "false", "false", "bernd.moeller@md.de", "BuildInfoESPluginTemplate.ftl", "6.8.1", "${product}-${version}-${extra}", " ")
-    g.sendMail(product, version, deployed, sql, config, dependency, mailaddress, templatefile, extra, "$pre $product ${version}${post}", jiraquery , date1)
+    //val tabelle = "<ul><li>MCBS-3408 :: keine Einträge </li><li>MCBS-3409 :: auch keine Einträge </li></ul>"
+    g.sendMail(product, version, deployed, sql, config, dependency, mailaddress, templatefile, extra, "$pre $product ${version}${post}", jiraquery , date1 )
+
 }
+
+
 
 

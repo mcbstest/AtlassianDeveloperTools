@@ -27,6 +27,18 @@
 	Viele Gruessee
 <br>
 	Releasebuild
+
+Zeile
+<#if tabelle != "none" >
+
+${tabelle}
+
+<#else>
+
+NEIN
+
+</#if>
+
 </body>
 
 </body>

@@ -123,7 +123,7 @@ class GeneralInfo {
         }catch (e : Exception) {
             println(e.toString())
         }
-     }
+    }
 
     /**
      * Methode zur Aktualisierung der Proxy-Liste (Version : Datum)
@@ -174,6 +174,68 @@ class GeneralInfo {
             println("Updated !")
         } else {
             println("Not Updated !")
+        }
+    }
+
+
+    fun sendMail2(product: String, version: String, ibn: String, sql: String, config: String, dependency: String, issuelist: String, extra: String, jiraquery: String, mailaddress: String, templatefile: String) {
+        logger.info("Send Mail ...")
+        //val ccmailaddress = " "
+        try {
+            //Mail-Host-Properties setzen
+            val props = Properties()
+            props["mail.smtp.host"] = "mailhost.mobilcom.de"
+            props["mail.smtp.port"] = 25
+            // Message definieren
+            val message = MimeMessage(Session.getInstance(props, null))
+            //set message headers
+            message.addHeader("Content-type", "text/HTML; charset=UTF-8");
+            message.addHeader("format", "flowed");
+            message.addHeader("Content-Transfer-Encoding", "8bit");
+            // Absender
+            message.setFrom(InternetAddress("bernd.moeller@md.de"))
+            // Adressatenliste
+            message.setRecipients(Message.RecipientType.TO, InternetAddress.parse(mailaddress))
+            //message.setRecipients(Message.RecipientType.CC, InternetAddress.parse(ccmailaddress))
+            // Betreff
+            message.subject = "Releasebuild : ${product} ${version}"
+            // Templatefile
+            val cfg = Configuration()
+
+            //Assume that the template is available under /src/main/resources/templates
+            cfg.setClassForTemplateLoading(GeneralInfo::class.java, "/templates/")
+            cfg.defaultEncoding = "UTF-8"
+
+            cfg.templateExceptionHandler = TemplateExceptionHandler.RETHROW_HANDLER
+            val template = cfg.getTemplate(templatefile)
+
+            //Mail-Parameter uebergeben
+            val paramMap = HashMap<String, String>()
+            paramMap["version"] = version
+            paramMap["product"] = product
+            paramMap["sql"] = sql
+            paramMap["config"] = config
+            paramMap["dependency"] = String(dependency.toByteArray(Charsets.UTF_8), Charset.forName("UTF-8"))
+            paramMap["extra"] = extra
+            paramMap["jiraquery"] = jiraquery
+            paramMap["date1"] = ibn
+            paramMap["tabelle"] = issuelist
+            val out = StringWriter()
+
+            template.process(paramMap, out)
+            println(out.toString())
+            var body = MimeBodyPart()
+            body.setContent(out.toString(), "text/html")
+            val multipart = MimeMultipart()
+            multipart.addBodyPart(body)
+            message.setContent(multipart)
+
+            // und raus ...
+            Transport.send(message)
+            logger.info("Sent ...")
+
+        }catch (e : Exception) {
+            println(e.toString())
         }
     }
 
