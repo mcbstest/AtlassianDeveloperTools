@@ -12,9 +12,9 @@
 <br><br> 
 <b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ${product}_${version} </b> 
 <br><br> 
-	gebaut , getestet und zur weiteren Verwendung freigegeben.
+	gebaut.
 <br><br><hr><br>
-<b>IBN (geplant) : </b> <#if date1 == "undefined" > ASAP <#else> ${date1} </#if> <br>
+<b>IBN (geplant) : </b> ${date1}
 <br><br><hr><br>
 <b>
 	Ergaenzungen :
@@ -33,7 +33,14 @@ ${tabelle}
 	Releasenote :
 </b>
 <br><br>
-	<a href="https://kiwi.freenet-group.de/display/AERP/${product}+${version}">"https://kiwi.freenet-group.de/display/AERP/${product}+${version}"</a>
+	<a href="https://kiwi.freenet-group.de/display/AERP/${extra} ">"https://kiwi.freenet-group.de/display/AERP/${extra} "</a>
+<br><br><hr><br>
+<b>
+	Jira-Uebersicht zu (exakt) dieser Iteration :
+</b>
+<br>
+	${jiraquery}
+
 <br><br>
 	Viele Gruesse
 <br>
