@@ -17,7 +17,7 @@
 <b>IBN (geplant) : </b> ${date1}
 <br><br><hr><br>
 <b>
-	Ergänzungen :
+	Ergaenzungen :
 </b>
 <br><br>
 <b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Config-Abhaengigkeiten:&nbsp;</b> <#if config == "true" > JA <#else> NEIN </#if><br>
