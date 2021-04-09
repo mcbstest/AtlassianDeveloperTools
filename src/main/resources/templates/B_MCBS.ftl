@@ -38,7 +38,7 @@ ${tabelle}
 	Jira-Uebersicht zu (exakt) dieser Iteration :
 </b>
 <br>
-	${jiraquery}
+	<a href="${jiraquery} ">"${jiraquery} "</a>
 
 <br><br>
 	Viele Gruesse
