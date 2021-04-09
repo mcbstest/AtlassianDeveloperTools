@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="69d156e7-7bc2-424e-9218-ff261dcbd8df" name="Default Changelist" comment="sendMail2 (link)">
+    <list default="true" id="69d156e7-7bc2-424e-9218-ff261dcbd8df" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/B_MCBS.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/B_MCBS.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/mail_info/SendMailInfo.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/mail_info/SendMailInfo.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -524,7 +525,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617968292389</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="sendMail2 (link)">
+      <created>1617968446853</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1617968446853</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -587,7 +595,8 @@
     <MESSAGE value="jquery in sendMail" />
     <MESSAGE value="sendMail2" />
     <MESSAGE value="sendMail2 (blanks)" />
-    <option name="LAST_COMMIT_MESSAGE" value="sendMail2 (blanks)" />
+    <MESSAGE value="sendMail2 (link)" />
+    <option name="LAST_COMMIT_MESSAGE" value="sendMail2 (link)" />
   </component>
   <component name="WindowStateProjectService">
     <state x="279" y="106" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1617276669002">
@@ -598,10 +607,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="498" y="202" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1536.824@0.0.1536.824" timestamp="1617276456876" />
-    <state x="389" y="2" key="CommitChangelistDialog2" timestamp="1617968416134">
+    <state x="389" y="2" key="CommitChangelistDialog2" timestamp="1617968445942">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="389" y="2" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1617968416134" />
+    <state x="389" y="2" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1617968445942" />
     <state x="550" y="169" key="FileChooserDialogImpl" timestamp="1609138322280">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
