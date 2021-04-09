@@ -12,7 +12,7 @@
 <br><br> 
 <b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ${product}_${version} </b> 
 <br><br> 
-	gebaut.
+	gebaut und zur weiteren Verwendung freigegeben.
 <br><br><hr><br>
 <b>IBN (geplant) : </b> ${date1}
 <br><br><hr><br>
@@ -20,7 +20,6 @@
 	Ergaenzungen :
 </b>
 <br><br>
-<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Config-Abhaengigkeiten:&nbsp;</b> <#if config == "true" > JA <#else> NEIN </#if><br>
 <b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dependencies:&nbsp;</b> ${dependency}<br>
 <b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DB-Changes:&nbsp;</b> <#if sql == "true" > ${sql} <#else> NEIN </#if> <br>
 <br><hr><br>

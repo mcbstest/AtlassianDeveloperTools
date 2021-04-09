@@ -61,7 +61,7 @@ fun main(args : Array<String>) {
     // referenced issues
     var complist: ArrayList<String>
     // list with sql-Issues list
-    val sqlIssueList: ArrayList<String> = arrayListOf()
+    var sqlIssueList: ArrayList<String> = arrayListOf()
     // flag for "hasSQL"
     var hasSQL = FALSE
     // properties
@@ -100,14 +100,17 @@ fun main(args : Array<String>) {
             }
         }
     }
-    logger.info("SQL : $hasSQL Liste : $sqlIssueList")
+
+    // val uniqueSqlIssueList = sqlIssueList.toSet()
+    logger.info("SQL : $hasSQL Liste : ${sqlIssueList.distinct().toString()}")
+
 
     // Property-File for boolean "dependency"
     val propertiesFile = "sql.properties"
     val fileWriter = FileWriter(propertiesFile)
     if (hasSQL) {
         properties["hasSQL"] = hasSQL.toString()
-        properties["sqlIssues"] = sqlIssueList.toString()
+        properties["sqlIssues"] = sqlIssueList.distinct().toString()
     } else {
         properties["hasSQL"] = hasSQL.toString()
 
