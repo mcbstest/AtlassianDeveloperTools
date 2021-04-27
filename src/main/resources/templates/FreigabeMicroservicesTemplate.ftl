@@ -1,6 +1,10 @@
 <#ftl strip_whitespace=false>
 <html>
 
+<head>
+    <meta charset="UTF-8" />
+</head>
+
 <div style="font-size:30;color:white;background-color:green">
 	<b>Release-Build und Freigabe : ${product}_${version} <#if date1 != "undefined" > // IBN (geplant) : ${date1} <#else> </#if>  </b>
 </div>

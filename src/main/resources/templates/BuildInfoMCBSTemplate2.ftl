@@ -1,5 +1,7 @@
 <html>
 
+
+
 <div style="font-size:30;color:white;background-color:green">
 	<b>Release-Build : ${product}_${version} <#if date1 != "undefined" > // IBN (geplant) : ${date1} <#else> </#if></b>
 </div>

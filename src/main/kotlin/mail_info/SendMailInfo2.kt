@@ -3,6 +3,7 @@ package mail_info
 import general_info.GeneralInfo
 import org.apache.log4j.Logger
 import java.io.File
+import java.nio.charset.Charset
 import kotlin.collections.ArrayList
 
 /**
@@ -29,7 +30,7 @@ import kotlin.collections.ArrayList
 
 fun main(args : Array<String>) {
     // Jira-Query
-    val jiraquery : String
+    var jiraquery : String
     // logging
     val logger = Logger.getLogger(GeneralInfo::class.java.name)
     // Auswertung der Parameter
@@ -58,8 +59,9 @@ fun main(args : Array<String>) {
 
 
     // jiraquery = "https://jira.freenet-group.de/issues/?jql=project%20in%20(abrms%2C%20MCBS)%20AND%20Epos-Verkn%C3%BCpfung%3D${epic}%20AND%20fixVersion%20in%20(${version})"
-    jiraquery = "https://jira.freenet-group.de/issues/?jql=project%20in%20(abrms%2C%20MCBS)%20AND issue in LinkedIssues (\"${epic}\", \"ist abh%C3%A4ngig von\")%20AND%20fixVersion%20in%20(${version})"
-
+    //jiraquery = "https://jira.freenet-group.de/issues/?jql=project%20in%20(abrms%2C%20MCBS)%20AND issue in LinkedIssues (\"${epic}\", \"ist abh%C3%A4ngig von\")%20AND%20fixVersion%20in%20(${version})"
+    jiraquery = "https://jira.freenet-group.de/issues/?jql=project%20in%20(abrms%2C%20MCBS)%20AND issue in LinkedIssues (\"${epic}\", \"ist abhängig von\") AND fixVersion in%20(${version})"
+    jiraquery = String(jiraquery.toByteArray(Charsets.UTF_8), Charset.forName("UTF-8"))
     var issuelist = "<ul>"
     // read issues from file and add to ArrayList
     val issueList = ArrayList<String>()

@@ -267,7 +267,7 @@ fun main(args : Array<String>) {
     //j.addComment("SPOC-421275", "Deployment auf 'Prod'")
       //j.getTransitions("META-223")
 
-
+/*
     val file = File("issueInfo.csv")
     file.writeText("issue;summary;status,components;semanticVersion;keywords;priority;fixVersions;affectedVersions;dependency;\n")
     var i = ArrayList<String>()
@@ -284,7 +284,13 @@ fun main(args : Array<String>) {
         logger.info(infoString)
         file.appendText("$infoString\n")
     }
+*/
 
+    val name = "Bernd"
+
+    if (! name.startsWith("ABe")) {
+        println ("kein B")
+    }
 
     // get components
     //val componentList = j.getComponentsForIssue("ABC-3007.xml")

@@ -1,1 +1,1 @@
-MCBS-3478;Fehler IndexOutOfBoundsException beim Stammdaten2SAP;Entwicklung abgeschlossen;MCBS;Patch;;Wichtig (3-normal); ;;keine;
+ABRMS-3051;Erweiterung Contentp-Datenbank;Entwicklung abgeschlossen;ms-contentprovider, SQL Update Script;Minor;"PRIOMD-6735";Wichtig (3-normal);ms-contentprovider_1.5.0;ms-contentprovider_1.4.12;keine;

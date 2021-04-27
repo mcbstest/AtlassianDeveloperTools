@@ -104,15 +104,20 @@ val compArray = projectComponents.split(",".toRegex()).dropLastWhile { it.isEmpt
 
     // referenced issues markieren
     s.forEach {
+        // IAT
         if (it.startsWith("IAT")) {
             logger.debug("Definieren der Version ...")
             j.createVersion("IAT", version)
             logger.debug("Setzen der FixVersion an $it ...")
             j.addFixVersion(it, version)
         }
+        // grundsätzlicher Kommentar
         logger.debug("Setzen des Build-Kommentars an $it...")
         j.addComment(it, "Releasebuild : $version \\n Diese Lösung ist testbereit nach dem Deployment dieser Version auf der für den Test vorgesehenen Plattform (GIT / PET)")
-        j.setAssignee(it,"jiraittste")
+
+        if ((! it.startsWith("MCBS")) || (! it.startsWith("ABRMS"))) {
+            j.setAssignee(it, "jiraittste")
+        }
     }
 
 }

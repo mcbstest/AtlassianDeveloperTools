@@ -200,7 +200,7 @@ class GeneralInfo {
             // Betreff
             message.subject = "Releasebuild : ${product} ${version}"
             // Templatefile
-            val cfg = Configuration()
+            val cfg = Configuration(Configuration.VERSION_2_3_27)
 
             //Assume that the template is available under /src/main/resources/templates
             cfg.setClassForTemplateLoading(GeneralInfo::class.java, "/templates/")
@@ -216,9 +216,9 @@ class GeneralInfo {
             paramMap["sql"] = sql
             paramMap["config"] = config
             paramMap["dependency"] = String(dependency.toByteArray(Charsets.UTF_8), Charset.forName("UTF-8"))
-            paramMap["extra"] = extra
+            paramMap["extra"] = String(extra.toByteArray(Charsets.UTF_8), Charset.forName("UTF-8"))
             paramMap["jiraquery"] = jiraquery
-            paramMap["date1"] = ibn
+            paramMap["date1"] = String(ibn.toByteArray(Charsets.UTF_8), Charset.forName("UTF-8"))
             paramMap["tabelle"] = issuelist
             val out = StringWriter()
 
